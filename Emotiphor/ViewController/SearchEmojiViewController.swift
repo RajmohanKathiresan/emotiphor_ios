@@ -21,7 +21,7 @@ class SearchEmojiViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.emojiCollectionView.backgroundColor = UIColor.whiteColor()
+        self.emojiCollectionView.backgroundColor = UIColor.white
         self.emojis = DataServices.shared.getEmojis()
     }
 
@@ -33,21 +33,21 @@ class SearchEmojiViewController: UIViewController {
 
 extension SearchEmojiViewController : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return emojis != nil ? emojis.count : 0
     }
     
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(EmojiCell.kIdentifier, forIndexPath: indexPath) as! EmojiCell
-        cell.setContent(withEmoji: emojis[indexPath.row])
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: EmojiCell.kIdentifier, for: indexPath) as! EmojiCell
+        cell.setContent(withEmoji: emojis[(indexPath as NSIndexPath).row])
         return cell
     }
     
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return EmojiCell.kPreferredSize
     }
 }

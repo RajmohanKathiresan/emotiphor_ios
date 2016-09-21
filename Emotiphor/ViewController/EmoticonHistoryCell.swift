@@ -15,15 +15,15 @@ class EmoticonHistoryCell: UICollectionViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        self.iconImageView.tintColor = UIColor.whiteColor()
-        self.iconImageView.backgroundColor = UIColor.whiteColor()
+        self.iconImageView.tintColor = UIColor.white
+        self.iconImageView.backgroundColor = UIColor.white
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
-    func setContent(emoticon:Emoticon) {
+    func setContent(_ emoticon:Emoticon) {
         self.iconImageView.tintColor = emoticon.tintColor
         self.iconImageView.backgroundColor = emoticon.backgroundColor
     }

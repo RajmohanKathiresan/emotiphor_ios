@@ -8,10 +8,10 @@
 
 import Foundation
 
-extension NSFileManager {
+extension FileManager {
     
-    static func getDocumentsDirectoryPath() -> NSURL {
-        let filemanager = NSFileManager.defaultManager()
-        return filemanager.URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first!
+    static func getDocumentsDirectoryPath() -> URL {
+        let filemanager = FileManager.default
+        return filemanager.urls(for: .documentDirectory, in: .userDomainMask).first!
     }
 }

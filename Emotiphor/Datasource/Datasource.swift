@@ -17,13 +17,13 @@ class Datasource {
 class DataServices {
     
     static let shared = DataServices()
-    private init() {
+    fileprivate init() {
         var config = Realm.Configuration()
         config.readOnly = false
         config.schemaVersion = 1
-        let fileManager = NSFileManager.defaultManager()
-        let documentsPath = fileManager.URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first!
-        config.fileURL = documentsPath.URLByAppendingPathComponent("emoji.realm")
+        let fileManager = FileManager.default
+        let documentsPath = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first!
+        config.fileURL = documentsPath.appendingPathComponent("emoji.realm")
         Realm.Configuration.defaultConfiguration = config
     }
     
@@ -32,10 +32,10 @@ class DataServices {
     func importFromJSON() {
    
         let realm = try! Realm()
-        let filePath = NSBundle.mainBundle().pathForResource("emoji", ofType: "json")
+        let filePath = Bundle.main.path(forResource: "emoji", ofType: "json")
         do {
-            let data = try NSData(contentsOfFile: filePath!, options: .DataReadingMappedIfSafe)
-            if let emojiDict = try NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers) as? [String:AnyObject] {
+            let data = try Data(contentsOf: URL(fileURLWithPath: filePath!), options: .mappedIfSafe)
+            if let emojiDict = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String:AnyObject] {
                 try realm.write({
                     var index = 0
                     for emoji in emojiDict {
@@ -52,15 +52,15 @@ class DataServices {
                             newEmoji.unicode_alternates = value[RMEmoji.Field.UnicodeAlternative] as! String
                             
                             if let aliases = value[RMEmoji.Field.Aliases] as? [String] {
-                                newEmoji.aliases = aliases.joinWithSeparator(RMEmoji.Field.Delimiter)
+                                newEmoji.aliases = aliases.joined(separator: RMEmoji.Field.Delimiter)
                             }
                             
                             if let keywords = value[RMEmoji.Field.Keywords] as? [String] {
-                                newEmoji.keywords = keywords.joinWithSeparator(RMEmoji.Field.Delimiter)
+                                newEmoji.keywords = keywords.joined(separator: RMEmoji.Field.Delimiter)
                             }
                             
                             if let aliasesASCII = value[RMEmoji.Field.AliasesASCII] as? [String] {
-                                newEmoji.aliases = aliasesASCII.joinWithSeparator(RMEmoji.Field.Delimiter)
+                                newEmoji.aliases = aliasesASCII.joined(separator: RMEmoji.Field.Delimiter)
                             }
                             
                             realm.add(newEmoji, update: true)
@@ -75,6 +75,6 @@ class DataServices {
     
     func getEmojis() -> Results<RMEmoji> {
         let realm = try! Realm()
-        return realm.objects(RMEmoji)
+        return realm.objects(RMEmoji.self)
     }
 }
