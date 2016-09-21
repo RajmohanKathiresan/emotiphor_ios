@@ -24,11 +24,16 @@ class CreatorViewController : UIViewController {
         self.emoticonView.tintColor = UIColor.whiteColor()
         self.exploreButton.layer.cornerRadius = 20
         self.historyCollectionView.backgroundColor = UIColor.whiteColor()
-        
     }
+    
+    
+    
     @IBAction func explodeTapped(sender: AnyObject) {
-        self.randomizeColor()
-        self.addToHistory()
+//        self.randomizeColor()
+//        self.addToHistory()
+        
+        let searchVC = UIStoryboard(name: SearchEmojiViewController.kStoryboardName, bundle: nil).instantiateViewControllerWithIdentifier(SearchEmojiViewController.kControllerIdentifier)
+        self.presentViewController(searchVC, animated: true, completion: nil)
     }
     
     private func addToHistory() {

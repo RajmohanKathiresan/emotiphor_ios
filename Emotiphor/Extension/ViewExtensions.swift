@@ -37,3 +37,4 @@ class RoundedImageView : UIImageView {
         self.layer.cornerRadius = self.bounds.size.width/2.0
     }
 }
+
