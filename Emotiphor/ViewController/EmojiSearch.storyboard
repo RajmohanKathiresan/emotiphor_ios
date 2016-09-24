@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,12 +15,54 @@
                         <viewControllerLayoutGuide type="bottom" id="vIf-05-C6l"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="IHI-wH-2yG">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="AkH-yY-0iw">
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bMX-Zi-1I0" userLabel="topview" customClass="AppNavigationView" customModule="Emotiphor" customModuleProvider="target">
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d9X-Zw-NxT" userLabel="navbarview" customClass="AppNavigationView" customModule="Emotiphor" customModuleProvider="target">
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fdL-Df-gjh" userLabel="back">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="36" id="Hea-bc-e9Z"/>
+                                                    <constraint firstAttribute="height" constant="36" id="JdZ-zw-Rkb"/>
+                                                </constraints>
+                                                <state key="normal" image="back_circle"/>
+                                                <connections>
+                                                    <action selector="backButtonTapped:" destination="ENd-zR-CDE" eventType="touchUpInside" id="dY5-qd-obd"/>
+                                                </connections>
+                                            </button>
+                                            <searchBar contentMode="redraw" placeholder="Search Emoji" translatesAutoresizingMaskIntoConstraints="NO" id="AkH-yY-0iw" customClass="AppSearchBar" customModule="Emotiphor" customModuleProvider="target">
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="ENd-zR-CDE" id="vii-KG-XbT"/>
+                                                </connections>
+                                            </searchBar>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.27058823529411763" green="0.094117647058823528" blue="0.43529411764705883" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="AkH-yY-0iw" firstAttribute="leading" secondItem="fdL-Df-gjh" secondAttribute="trailing" constant="12" id="04q-96-x0h"/>
+                                            <constraint firstItem="fdL-Df-gjh" firstAttribute="centerY" secondItem="d9X-Zw-NxT" secondAttribute="centerY" id="94o-8A-mX0"/>
+                                            <constraint firstItem="fdL-Df-gjh" firstAttribute="leading" secondItem="d9X-Zw-NxT" secondAttribute="leading" constant="12" id="Wfn-hy-shY"/>
+                                            <constraint firstItem="AkH-yY-0iw" firstAttribute="centerY" secondItem="d9X-Zw-NxT" secondAttribute="centerY" id="cjs-1w-mFt"/>
+                                            <constraint firstAttribute="trailing" secondItem="AkH-yY-0iw" secondAttribute="trailing" constant="8" id="q8y-l9-FB4"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.27058823529411763" green="0.094117647058823528" blue="0.43529411764705883" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="d9X-Zw-NxT" firstAttribute="leading" secondItem="bMX-Zi-1I0" secondAttribute="leading" id="LJ8-pD-V6D"/>
+                                    <constraint firstItem="d9X-Zw-NxT" firstAttribute="top" secondItem="bMX-Zi-1I0" secondAttribute="top" constant="20" id="aWF-vX-qU1">
+                                        <variation key="heightClass=compact" constant="0.0"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="70" id="glH-Qd-tq0">
+                                        <variation key="heightClass=compact" constant="50"/>
+                                    </constraint>
+                                    <constraint firstAttribute="bottom" secondItem="d9X-Zw-NxT" secondAttribute="bottom" id="kEo-ha-dkM"/>
+                                    <constraint firstAttribute="trailing" secondItem="d9X-Zw-NxT" secondAttribute="trailing" id="yrm-YK-Hpc"/>
+                                </constraints>
+                            </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XpP-Zy-xxN" userLabel="collectionview">
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="6Ny-4f-GFr">
                                     <size key="itemSize" width="40" height="40"/>
@@ -70,15 +111,16 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="AkH-yY-0iw" firstAttribute="top" secondItem="IHI-wH-2yG" secondAttribute="topMargin" id="B8i-0I-Yca"/>
                             <constraint firstItem="XpP-Zy-xxN" firstAttribute="leading" secondItem="IHI-wH-2yG" secondAttribute="leading" constant="10" id="Dls-SB-rjD"/>
                             <constraint firstAttribute="trailing" secondItem="XpP-Zy-xxN" secondAttribute="trailing" constant="10" id="MaX-dw-I0A"/>
-                            <constraint firstItem="XpP-Zy-xxN" firstAttribute="top" secondItem="AkH-yY-0iw" secondAttribute="bottom" id="NlS-YN-aQH"/>
-                            <constraint firstItem="AkH-yY-0iw" firstAttribute="leading" secondItem="IHI-wH-2yG" secondAttribute="leading" id="WF9-3e-1eD"/>
-                            <constraint firstItem="vIf-05-C6l" firstAttribute="top" secondItem="XpP-Zy-xxN" secondAttribute="bottom" id="fSN-rf-doz"/>
-                            <constraint firstAttribute="trailing" secondItem="AkH-yY-0iw" secondAttribute="trailing" id="p1o-NZ-PsY"/>
+                            <constraint firstAttribute="trailing" secondItem="bMX-Zi-1I0" secondAttribute="trailing" id="Rut-Uw-hGC"/>
+                            <constraint firstItem="vIf-05-C6l" firstAttribute="top" secondItem="XpP-Zy-xxN" secondAttribute="bottom" constant="10" id="fSN-rf-doz"/>
+                            <constraint firstItem="bMX-Zi-1I0" firstAttribute="top" secondItem="IHI-wH-2yG" secondAttribute="top" id="rsX-Ya-rHP"/>
+                            <constraint firstItem="XpP-Zy-xxN" firstAttribute="top" secondItem="bMX-Zi-1I0" secondAttribute="bottom" constant="10" id="v0y-Bu-TdY"/>
+                            <constraint firstItem="bMX-Zi-1I0" firstAttribute="leading" secondItem="IHI-wH-2yG" secondAttribute="leading" id="wdz-KW-Mot"/>
                         </constraints>
                     </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="emojiCollectionView" destination="XpP-Zy-xxN" id="76a-mH-Atm"/>
                         <outlet property="searchBar" destination="AkH-yY-0iw" id="IyG-XV-nIK"/>
@@ -91,5 +133,6 @@
     </scenes>
     <resources>
         <image name="0023" width="128" height="128"/>
+        <image name="back_circle" width="40" height="40"/>
     </resources>
 </document>

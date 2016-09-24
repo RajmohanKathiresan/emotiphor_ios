@@ -60,7 +60,7 @@ class DataServices {
                             }
                             
                             if let aliasesASCII = value[RMEmoji.Field.AliasesASCII] as? [String] {
-                                newEmoji.aliases = aliasesASCII.joined(separator: RMEmoji.Field.Delimiter)
+                                newEmoji.aliases_ascii = aliasesASCII.joined(separator: RMEmoji.Field.Delimiter)
                             }
                             
                             realm.add(newEmoji, update: true)
@@ -76,5 +76,22 @@ class DataServices {
     func getEmojis() -> Results<RMEmoji> {
         let realm = try! Realm()
         return realm.objects(RMEmoji.self)
+    }
+    
+    func searchEmojis(forKeyword keyword:String) -> Results<RMEmoji>! {
+        let realm = try! Realm()
+        var results:Results<RMEmoji>!
+        let processedKeyword = keyword.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+        if !processedKeyword.isEmpty {
+            let comparison = "Contains[c]"
+            let predicate = NSPredicate(format: "\(RMEmoji.Field.Keywords) \(comparison) %@ OR \(RMEmoji.Field.ShortName) \(comparison) %@ OR \(RMEmoji.Field.Category) \(comparison) %@ OR \(RMEmoji.Field.Aliases) \(comparison) %@", processedKeyword, processedKeyword, processedKeyword, processedKeyword)
+            results = realm.objects(RMEmoji.self).filter(predicate)
+        } else {
+            results = realm.objects(RMEmoji.self)
+        }
+        if results != nil {
+            results = results.sorted(byProperty: RMEmoji.Field.EmojiOrder, ascending: true)
+        }
+        return results
     }
 }

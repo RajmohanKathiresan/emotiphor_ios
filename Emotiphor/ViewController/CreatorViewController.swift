@@ -11,39 +11,32 @@ import UIKit
 class CreatorViewController : UIViewController {
     
     @IBOutlet weak var emoticonView: UIImageView!
-    @IBOutlet weak var exploreButton: UIButton!
     @IBOutlet weak var historyCollectionView: UICollectionView!
     
-    var history:[Emoticon] = [Emoticon]()
+    var history:[RMEmoji] = [RMEmoji]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Emotiphor"
-        self.emoticonView.layer.cornerRadius = 25.0
-        self.emoticonView.backgroundColor = UIColor.orange
-        self.emoticonView.tintColor = UIColor.white
-        self.exploreButton.layer.cornerRadius = 20
+        self.applyTheme()
+        let searchButton = UIBarButtonItem(image: UIImage(named:"search"), style: .plain, target: self, action: #selector(CreatorViewController.searchTapAction(_:)))
+        searchButton.tintColor = UIColor.white
+        self.navigationItem.rightBarButtonItem = searchButton
+    }
+    
+    fileprivate func applyTheme() {
         self.historyCollectionView.backgroundColor = UIColor.white
+        let navigationBar = self.navigationController?.navigationBar
+        navigationBar?.backgroundColor = ApplicationTheme.color()
+        navigationBar?.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
     }
     
-    
-    
-    @IBAction func explodeTapped(_ sender: AnyObject) {
-//        self.randomizeColor()
-//        self.addToHistory()
-        
-        let searchVC = UIStoryboard(name: SearchEmojiViewController.kStoryboardName, bundle: nil).instantiateViewController(withIdentifier: SearchEmojiViewController.kControllerIdentifier)
-        self.present(searchVC, animated: true, completion: nil)
-    }
-    
-    fileprivate func addToHistory() {
-        let name = "happy-\(self.history.count)"
-        let emoticon = Emoticon(name: name, backgroundColor: self.emoticonView.backgroundColor!, tintColor: self.emoticonView.tintColor)
-        history.insert(emoticon, at: 0)
+    fileprivate func addToHistory(emoji:RMEmoji) {
+        history.insert(emoji, at: 0)
         historyCollectionView.reloadData()
         
         //Save tp Disk
-        saveToDisk(emoticon)
+//        saveToDisk(emoji)
     }
     
     fileprivate func randomizeColor() {
@@ -54,6 +47,8 @@ class CreatorViewController : UIViewController {
         self.emoticonView.backgroundColor = randomColor
     }
     
+    
+    /// TODO: Need Refinements
     fileprivate func getImageFromView() -> UIImage {
         let scale = UIScreen.main.nativeScale
         print(scale)
@@ -66,7 +61,7 @@ class CreatorViewController : UIViewController {
         return image!
     }
     
-    fileprivate func saveToDisk(_ emoticon:Emoticon) {
+    fileprivate func saveToDisk(_ emoticon:RMEmoji) {
        let image = getImageFromView()
         let filemanager = FileManager.default
         let path = filemanager.urls(for: FileManager.SearchPathDirectory.documentDirectory, in: FileManager.SearchPathDomainMask.userDomainMask).first!
@@ -80,7 +75,7 @@ class CreatorViewController : UIViewController {
         } catch {
             print("Folder already exists")
         }
-        let filename = emoticon.name + ".png"
+        let filename = emoticon.unicode + ".png"
         let fileurl = directoryPath.appendingPathComponent("\(filename)")
         print(fileurl.path)
         do {
@@ -88,6 +83,12 @@ class CreatorViewController : UIViewController {
         } catch {
             print("Issues writing to file")
         }
+    }
+    
+    func searchTapAction(_:UIBarButtonItem) {
+        let searchVC = UIViewController.GetViewController(instoryboard: SearchEmojiViewController.kStoryboardName, withController: SearchEmojiViewController.kControllerIdentifier) as! SearchEmojiViewController
+        searchVC.delegate = self
+        self.present(searchVC, animated: true, completion: nil)
     }
 }
 
@@ -102,8 +103,8 @@ extension CreatorViewController : UICollectionViewDelegate, UICollectionViewData
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: EmoticonHistoryCell.kIdentifier, for: indexPath) as! EmoticonHistoryCell
-        cell.setContent(history[(indexPath as NSIndexPath).row])
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: EmojiCell.kIdentifier, for: indexPath) as! EmojiCell
+        cell.setContent(withEmoji: history[(indexPath as NSIndexPath).row])
         return cell
     }
     
@@ -111,4 +112,17 @@ extension CreatorViewController : UICollectionViewDelegate, UICollectionViewData
         return CGSize(width: 40.0,height: 40.0)
     }
 }
+
+extension CreatorViewController : SearchEmojiDelegate {
+    
+    func searchEmojiDidCancel(sender: AnyObject?) {
+        //TODO:
+    }
+    
+    func searchEmojiDidSelectEmoji(emoji: RMEmoji, sender: AnyObject?) {
+        self.addToHistory(emoji: emoji)
+        self.emoticonView.image = UIImage(named: emoji.unicode)
+    }
+}
+
 

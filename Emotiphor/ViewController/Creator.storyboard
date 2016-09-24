@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="jSD-4w-pUs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jSD-4w-pUs">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--EmotiPhor-->
         <scene sceneID="8he-4V-93r">
             <objects>
                 <navigationController title="EmotiPhor" id="jSD-4w-pUs" sceneMemberID="viewController">
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JY6-99-4Em">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="JY6-99-4Em">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.2691360458" green="0.093217687940000002" blue="0.43337673609999999" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="NaG-kx-TOz" kind="relationship" relationship="rootViewController" id="nl9-Od-Ast"/>
@@ -23,7 +24,7 @@
             </objects>
             <point key="canvasLocation" x="-643" y="323"/>
         </scene>
-        <!--Creator View Controller-->
+        <!--Emotiphor-->
         <scene sceneID="NNk-Nx-b8H">
             <objects>
                 <viewController id="NaG-kx-TOz" customClass="CreatorViewController" customModule="Emotiphor" customModuleProvider="target" sceneMemberID="viewController">
@@ -32,60 +33,26 @@
                         <viewControllerLayoutGuide type="bottom" id="7Bq-Dj-0rv"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="mdG-gZ-fLA">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JLJ-it-fJ4" userLabel="Editor">
-                                <rect key="frame" x="0.0" y="64" width="320" height="144"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nyr-JT-1kt" customClass="RoundedRectView" customModule="Emotiphor" customModuleProvider="target">
-                                        <rect key="frame" x="120" y="12" width="80" height="80"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="happy" translatesAutoresizingMaskIntoConstraints="NO" id="sF3-zd-d4w">
-                                                <rect key="frame" x="15" y="15" width="50" height="50"/>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="Tlr-Sz-nWE"/>
-                                                    <constraint firstAttribute="width" constant="50" id="fR0-s2-IFv"/>
-                                                </constraints>
-                                            </imageView>
-                                        </subviews>
-                                        <color key="backgroundColor" red="0.97902856689999995" green="0.97902856689999995" blue="0.97902856689999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sF3-zd-d4w">
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="80" id="LZx-EN-DQD"/>
-                                            <constraint firstItem="sF3-zd-d4w" firstAttribute="centerY" secondItem="nyr-JT-1kt" secondAttribute="centerY" id="WSh-S3-5j6"/>
-                                            <constraint firstAttribute="width" constant="80" id="ays-Nl-Jle"/>
-                                            <constraint firstItem="sF3-zd-d4w" firstAttribute="centerX" secondItem="nyr-JT-1kt" secondAttribute="centerX" id="oV8-PT-Myh"/>
+                                            <constraint firstAttribute="height" constant="64" id="gck-gf-Rma"/>
+                                            <constraint firstAttribute="width" constant="64" id="t6J-st-HoC"/>
                                         </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="5"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b4j-Db-IZm">
-                                        <rect key="frame" x="148" y="112" width="24" height="24"/>
-                                        <color key="backgroundColor" red="0.5546875" green="0.27688537810000002" blue="0.25150104649999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="24" id="ZEa-aY-n35"/>
-                                            <constraint firstAttribute="height" constant="24" id="o48-dP-Rxc"/>
-                                        </constraints>
-                                        <state key="normal" title="Explode" image="power"/>
-                                        <connections>
-                                            <action selector="explodeTapped:" destination="NaG-kx-TOz" eventType="touchUpInside" id="8o0-xQ-Q4i"/>
-                                        </connections>
-                                    </button>
+                                    </imageView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="b4j-Db-IZm" secondAttribute="bottom" constant="8" id="3g8-dM-1Ua"/>
-                                    <constraint firstItem="nyr-JT-1kt" firstAttribute="centerX" secondItem="JLJ-it-fJ4" secondAttribute="centerX" id="7OQ-OQ-ifw"/>
-                                    <constraint firstItem="nyr-JT-1kt" firstAttribute="centerY" secondItem="JLJ-it-fJ4" secondAttribute="centerY" constant="-20" id="O0C-ho-APn"/>
-                                    <constraint firstItem="b4j-Db-IZm" firstAttribute="centerX" secondItem="JLJ-it-fJ4" secondAttribute="centerX" id="obP-32-igj"/>
+                                    <constraint firstItem="sF3-zd-d4w" firstAttribute="centerY" secondItem="JLJ-it-fJ4" secondAttribute="centerY" id="Fvm-6n-BGW"/>
+                                    <constraint firstItem="sF3-zd-d4w" firstAttribute="centerX" secondItem="JLJ-it-fJ4" secondAttribute="centerX" id="p5X-bi-35A"/>
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="J9X-xx-HlR" userLabel="history">
-                                <rect key="frame" x="0.0" y="212" width="320" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="I5s-Ng-jke"/>
                                 </constraints>
@@ -96,7 +63,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="EmoticonHistoryCell" id="44C-9d-tJX" customClass="EmoticonHistoryCell" customModule="Emotiphor" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="EmojiCell" id="44C-9d-tJX" customClass="EmojiCell" customModule="Emotiphor" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="2" width="40" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -104,13 +71,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Ec-2Y-afU">
-                                                    <rect key="frame" x="4" y="4" width="32" height="32"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="happy" translatesAutoresizingMaskIntoConstraints="NO" id="Foa-85-nPF" customClass="RoundedImageView" customModule="Emotiphor" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
-                                                        </imageView>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="happy" translatesAutoresizingMaskIntoConstraints="NO" id="Foa-85-nPF" customClass="RoundedImageView" customModule="Emotiphor" customModuleProvider="target"/>
                                                     </subviews>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="Foa-85-nPF" secondAttribute="trailing" id="BiL-KY-SJa"/>
                                                         <constraint firstAttribute="bottom" secondItem="Foa-85-nPF" secondAttribute="bottom" id="J5K-li-U5Y"/>
@@ -119,7 +83,6 @@
                                                     </constraints>
                                                 </view>
                                             </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
                                             <constraint firstItem="9Ec-2Y-afU" firstAttribute="top" secondItem="44C-9d-tJX" secondAttribute="top" constant="4" id="YwQ-s8-gLX"/>
@@ -129,7 +92,7 @@
                                         </constraints>
                                         <size key="customSize" width="40" height="40"/>
                                         <connections>
-                                            <outlet property="iconImageView" destination="Foa-85-nPF" id="TDl-GX-3NC"/>
+                                            <outlet property="emojiView" destination="Foa-85-nPF" id="uLv-4s-6ON"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -139,32 +102,30 @@
                                 </connections>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="JLJ-it-fJ4" firstAttribute="leading" secondItem="mdG-gZ-fLA" secondAttribute="leading" id="62j-eZ-Gr8"/>
                             <constraint firstItem="J9X-xx-HlR" firstAttribute="top" secondItem="JLJ-it-fJ4" secondAttribute="bottom" constant="4" id="IFb-ax-MAw"/>
-                            <constraint firstItem="JLJ-it-fJ4" firstAttribute="top" secondItem="X1R-r2-Mei" secondAttribute="bottom" id="Meh-0H-UhZ"/>
                             <constraint firstItem="J9X-xx-HlR" firstAttribute="trailing" secondItem="JLJ-it-fJ4" secondAttribute="trailing" id="PvC-tC-1zZ"/>
+                            <constraint firstItem="JLJ-it-fJ4" firstAttribute="top" secondItem="X1R-r2-Mei" secondAttribute="bottom" id="dTD-ht-CZ5"/>
                             <constraint firstItem="J9X-xx-HlR" firstAttribute="leading" secondItem="JLJ-it-fJ4" secondAttribute="leading" id="dxx-Rt-aWh"/>
                             <constraint firstAttribute="trailing" secondItem="JLJ-it-fJ4" secondAttribute="trailing" id="gWa-Mi-enI"/>
-                            <constraint firstItem="JLJ-it-fJ4" firstAttribute="height" secondItem="mdG-gZ-fLA" secondAttribute="height" multiplier="0.3" id="tjw-dp-OEj"/>
+                            <constraint firstItem="JLJ-it-fJ4" firstAttribute="height" secondItem="mdG-gZ-fLA" secondAttribute="height" multiplier="0.45" id="tjw-dp-OEj"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="zeA-kr-l6R"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <navigationItem key="navigationItem" title="Emotiphor" id="zeA-kr-l6R"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
-                        <outlet property="emoticonView" destination="sF3-zd-d4w" id="W5U-Yi-EH0"/>
-                        <outlet property="exploreButton" destination="b4j-Db-IZm" id="WoV-JX-Xvl"/>
+                        <outlet property="emoticonView" destination="sF3-zd-d4w" id="5bl-aK-few"/>
                         <outlet property="historyCollectionView" destination="J9X-xx-HlR" id="rdm-aK-4P1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xd1-LQ-897" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-256" y="323"/>
+            <point key="canvasLocation" x="218" y="316"/>
         </scene>
     </scenes>
     <resources>
         <image name="happy" width="60" height="60"/>
-        <image name="power" width="60" height="60"/>
     </resources>
 </document>

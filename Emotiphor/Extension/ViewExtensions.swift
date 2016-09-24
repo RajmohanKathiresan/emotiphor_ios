@@ -38,3 +38,11 @@ class RoundedImageView : UIImageView {
     }
 }
 
+class AppNavigationView : UIView {
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.backgroundColor = ApplicationTheme.color()
+    }
+}
+

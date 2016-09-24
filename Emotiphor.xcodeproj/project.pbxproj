@@ -22,6 +22,10 @@
 		E23308D31D885D4800476805 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E23308D11D885D4800476805 /* LaunchScreen.storyboard */; };
 		E23308DC1D885FB600476805 /* Creator.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E23308DB1D885FB600476805 /* Creator.storyboard */; };
 		E23308DE1D88608900476805 /* CreatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23308DD1D88608900476805 /* CreatorViewController.swift */; };
+		E246B0181D965F9700421E04 /* RMLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E246B0171D965F9700421E04 /* RMLogger.swift */; };
+		E246B01F1D966A5400421E04 /* SearchBarExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E246B01E1D966A5400421E04 /* SearchBarExtensions.swift */; };
+		E246B0241D966FB200421E04 /* ApplicationTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E246B0231D966FB200421E04 /* ApplicationTheme.swift */; };
+		E246B0261D96918B00421E04 /* ViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E246B0251D96918B00421E04 /* ViewControllerExtensions.swift */; };
 		E293221B1D8DB8C300B2CC3E /* EmojiOne-001.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E293221A1D8DB8C300B2CC3E /* EmojiOne-001.xcassets */; };
 		E293221F1D8DB98500B2CC3E /* EmojiOne-002.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E293221E1D8DB98500B2CC3E /* EmojiOne-002.xcassets */; };
 		E29322211D8DBA0E00B2CC3E /* EmojiOne-003.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E29322201D8DBA0E00B2CC3E /* EmojiOne-003.xcassets */; };
@@ -51,6 +55,10 @@
 		E23308D41D885D4800476805 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E23308DB1D885FB600476805 /* Creator.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Creator.storyboard; path = ViewController/Creator.storyboard; sourceTree = "<group>"; };
 		E23308DD1D88608900476805 /* CreatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreatorViewController.swift; path = ViewController/CreatorViewController.swift; sourceTree = "<group>"; };
+		E246B0171D965F9700421E04 /* RMLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RMLogger.swift; path = Extension/RMLogger.swift; sourceTree = "<group>"; };
+		E246B01E1D966A5400421E04 /* SearchBarExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchBarExtensions.swift; path = Extension/SearchBarExtensions.swift; sourceTree = "<group>"; };
+		E246B0231D966FB200421E04 /* ApplicationTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApplicationTheme.swift; path = Theme/ApplicationTheme.swift; sourceTree = "<group>"; };
+		E246B0251D96918B00421E04 /* ViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewControllerExtensions.swift; path = Extension/ViewControllerExtensions.swift; sourceTree = "<group>"; };
 		E293221A1D8DB8C300B2CC3E /* EmojiOne-001.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = "EmojiOne-001.xcassets"; path = "EmojiOne/EmojiOne-001.xcassets"; sourceTree = "<group>"; };
 		E293221E1D8DB98500B2CC3E /* EmojiOne-002.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = "EmojiOne-002.xcassets"; path = "EmojiOne/EmojiOne-002.xcassets"; sourceTree = "<group>"; };
 		E29322201D8DBA0E00B2CC3E /* EmojiOne-003.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = "EmojiOne-003.xcassets"; path = "EmojiOne/EmojiOne-003.xcassets"; sourceTree = "<group>"; };
@@ -138,6 +146,7 @@
 		E23308C71D885D4800476805 /* Emotiphor */ = {
 			isa = PBXGroup;
 			children = (
+				E246B0201D966B4900421E04 /* Utils */,
 				E208C1D71D8DB35900138D57 /* Assets */,
 				E209565E1D8B0ABC008871D7 /* Datasource */,
 				E20956591D8B0755008871D7 /* Model */,
@@ -153,14 +162,46 @@
 		E23308DA1D885F9600476805 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				E23308DB1D885FB600476805 /* Creator.storyboard */,
-				E23308DD1D88608900476805 /* CreatorViewController.swift */,
-				E20956611D8B0CAC008871D7 /* EmoticonHistoryCell.swift */,
+				E246B0161D965E1200421E04 /* History */,
+				E246B0151D965E0300421E04 /* Creator */,
+				E246B0141D965DE500421E04 /* Search */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		E246B0141D965DE500421E04 /* Search */ = {
+			isa = PBXGroup;
+			children = (
 				E22EC97E1D8EF02C00C66D30 /* EmojiSearch.storyboard */,
 				E22EC9801D8F031A00C66D30 /* EmojiCell.swift */,
 				E22EC9821D8F03BE00C66D30 /* SearchEmojiViewController.swift */,
 			);
-			name = ViewController;
+			name = Search;
+			sourceTree = "<group>";
+		};
+		E246B0151D965E0300421E04 /* Creator */ = {
+			isa = PBXGroup;
+			children = (
+				E23308DB1D885FB600476805 /* Creator.storyboard */,
+				E23308DD1D88608900476805 /* CreatorViewController.swift */,
+			);
+			name = Creator;
+			sourceTree = "<group>";
+		};
+		E246B0161D965E1200421E04 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				E20956611D8B0CAC008871D7 /* EmoticonHistoryCell.swift */,
+			);
+			name = History;
+			sourceTree = "<group>";
+		};
+		E246B0201D966B4900421E04 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E246B0231D966FB200421E04 /* ApplicationTheme.swift */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 		E2A17D341D886E0C00A18987 /* Extension */ = {
@@ -169,6 +210,9 @@
 				E2A17D351D886E3100A18987 /* ViewExtensions.swift */,
 				E209565C1D8B08EA008871D7 /* ColorExtensions.swift */,
 				E22EC97C1D8E9E3200C66D30 /* FileManagerExtensions.swift */,
+				E246B0171D965F9700421E04 /* RMLogger.swift */,
+				E246B01E1D966A5400421E04 /* SearchBarExtensions.swift */,
+				E246B0251D96918B00421E04 /* ViewControllerExtensions.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -270,16 +314,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E246B0181D965F9700421E04 /* RMLogger.swift in Sources */,
 				E20956601D8B0AE1008871D7 /* Datasource.swift in Sources */,
 				E20956621D8B0CAC008871D7 /* EmoticonHistoryCell.swift in Sources */,
 				E22EC9811D8F031A00C66D30 /* EmojiCell.swift in Sources */,
 				E22EC97D1D8E9E3200C66D30 /* FileManagerExtensions.swift in Sources */,
 				E23308C91D885D4800476805 /* AppDelegate.swift in Sources */,
+				E246B01F1D966A5400421E04 /* SearchBarExtensions.swift in Sources */,
 				E209565D1D8B08EA008871D7 /* ColorExtensions.swift in Sources */,
 				E2A17D361D886E3100A18987 /* ViewExtensions.swift in Sources */,
 				E208C1DF1D8DB45300138D57 /* RealmModel.swift in Sources */,
 				E22EC9831D8F03BE00C66D30 /* SearchEmojiViewController.swift in Sources */,
 				E23308DE1D88608900476805 /* CreatorViewController.swift in Sources */,
+				E246B0241D966FB200421E04 /* ApplicationTheme.swift in Sources */,
+				E246B0261D96918B00421E04 /* ViewControllerExtensions.swift in Sources */,
 				E209565B1D8B0808008871D7 /* Emoticon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
