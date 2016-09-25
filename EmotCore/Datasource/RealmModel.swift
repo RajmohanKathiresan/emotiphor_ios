@@ -9,7 +9,7 @@
 import Foundation
 import RealmSwift
 
-class RMEmoji : Object {
+public class RMEmoji : Object {
     
     struct Field {
         static let ID = "id"
@@ -26,31 +26,31 @@ class RMEmoji : Object {
         static let Delimiter = "|"
     }
     
-    dynamic var id:Int = 0
-    dynamic var uniqueKey:String = ""
-
-    dynamic var category:String = ""
-    dynamic var emoji_order:Int = 0
-    dynamic var name:String = ""
-    dynamic var shortname:String = ""
-    dynamic var unicode:String = ""
-    dynamic var unicode_alternates:String = ""
+    public dynamic var id:Int = 0
+    public dynamic var uniqueKey:String = ""
+    
+    public dynamic var category:String = ""
+    public dynamic var emoji_order:Int = 0
+    public dynamic var name:String = ""
+    public dynamic var shortname:String = ""
+    public dynamic var unicode:String = ""
+    public dynamic var unicode_alternates:String = ""
     
     //Array delimited by '|'
-    dynamic var aliases:String = ""
-    dynamic var aliases_ascii:String = ""
-    dynamic var keywords:String = ""
-
-    override static func indexedProperties() -> [String] {
+    public dynamic var aliases:String = ""
+    public dynamic var aliases_ascii:String = ""
+    public dynamic var keywords:String = ""
+    
+    override public static func indexedProperties() -> [String] {
         return [Field.Name,Field.ShortName,Field.Keywords,Field.Category]
     }
     
-    override static func primaryKey() -> String? {
+    override public static func primaryKey() -> String? {
         return Field.ID
     }
 }
 
-class RMEmojiCategory : Object {
+public class RMEmojiCategory : Object {
     
     dynamic var id:Int = 0
     dynamic var name:String = ""

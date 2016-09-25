@@ -7,11 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E208C1DD1D8DB3E600138D57 /* emoji.json in Resources */ = {isa = PBXBuildFile; fileRef = E208C1DC1D8DB3E600138D57 /* emoji.json */; };
-		E208C1DF1D8DB45300138D57 /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E208C1DE1D8DB45300138D57 /* RealmModel.swift */; };
+		E20708B61D97D86E005DAC69 /* EmotCore.h in Headers */ = {isa = PBXBuildFile; fileRef = E20708B41D97D86E005DAC69 /* EmotCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E20708B91D97D86E005DAC69 /* EmotCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E20708B21D97D86E005DAC69 /* EmotCore.framework */; };
+		E20708BA1D97D86E005DAC69 /* EmotCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E20708B21D97D86E005DAC69 /* EmotCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E20708BF1D97D898005DAC69 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E208C1D31D8DAE3C00138D57 /* Realm.framework */; };
+		E20708C01D97D898005DAC69 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E208C1D41D8DAE3C00138D57 /* RealmSwift.framework */; };
+		E20708C61D97D924005DAC69 /* Datasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20708C21D97D924005DAC69 /* Datasource.swift */; };
+		E20708C71D97D924005DAC69 /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20708C31D97D924005DAC69 /* RealmModel.swift */; };
+		E20708C81D97D924005DAC69 /* emoji.json in Resources */ = {isa = PBXBuildFile; fileRef = E20708C51D97D924005DAC69 /* emoji.json */; };
+		E20708D41D97E08B005DAC69 /* EmojiOne-001.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E20708D11D97E08B005DAC69 /* EmojiOne-001.xcassets */; };
+		E20708D51D97E08B005DAC69 /* EmojiOne-002.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E20708D21D97E08B005DAC69 /* EmojiOne-002.xcassets */; };
+		E20708D61D97E08B005DAC69 /* EmojiOne-003.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E20708D31D97E08B005DAC69 /* EmojiOne-003.xcassets */; };
 		E209565B1D8B0808008871D7 /* Emoticon.swift in Sources */ = {isa = PBXBuildFile; fileRef = E209565A1D8B0808008871D7 /* Emoticon.swift */; };
 		E209565D1D8B08EA008871D7 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E209565C1D8B08EA008871D7 /* ColorExtensions.swift */; };
-		E20956601D8B0AE1008871D7 /* Datasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E209565F1D8B0AE1008871D7 /* Datasource.swift */; };
 		E20956621D8B0CAC008871D7 /* EmoticonHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20956611D8B0CAC008871D7 /* EmoticonHistoryCell.swift */; };
 		E22EC97D1D8E9E3200C66D30 /* FileManagerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22EC97C1D8E9E3200C66D30 /* FileManagerExtensions.swift */; };
 		E22EC97F1D8EF02C00C66D30 /* EmojiSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E22EC97E1D8EF02C00C66D30 /* EmojiSearch.storyboard */; };
@@ -26,23 +34,48 @@
 		E246B01F1D966A5400421E04 /* SearchBarExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E246B01E1D966A5400421E04 /* SearchBarExtensions.swift */; };
 		E246B0241D966FB200421E04 /* ApplicationTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E246B0231D966FB200421E04 /* ApplicationTheme.swift */; };
 		E246B0261D96918B00421E04 /* ViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E246B0251D96918B00421E04 /* ViewControllerExtensions.swift */; };
-		E293221B1D8DB8C300B2CC3E /* EmojiOne-001.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E293221A1D8DB8C300B2CC3E /* EmojiOne-001.xcassets */; };
-		E293221F1D8DB98500B2CC3E /* EmojiOne-002.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E293221E1D8DB98500B2CC3E /* EmojiOne-002.xcassets */; };
-		E29322211D8DBA0E00B2CC3E /* EmojiOne-003.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E29322201D8DBA0E00B2CC3E /* EmojiOne-003.xcassets */; };
-		E2A17D331D88654800A18987 /* Pack001.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2A17D321D88654800A18987 /* Pack001.xcassets */; };
+		E2A17D331D88654800A18987 /* Placeholder.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2A17D321D88654800A18987 /* Placeholder.xcassets */; };
 		E2A17D361D886E3100A18987 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A17D351D886E3100A18987 /* ViewExtensions.swift */; };
-		E2BB5C011D92245000FE0320 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E208C1D31D8DAE3C00138D57 /* Realm.framework */; };
-		E2BB5C021D92245000FE0320 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E208C1D41D8DAE3C00138D57 /* RealmSwift.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		E20708B71D97D86E005DAC69 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E23308BD1D885D4800476805 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E20708B11D97D86E005DAC69;
+			remoteInfo = EmotCore;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E20708BE1D97D86E005DAC69 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E20708BA1D97D86E005DAC69 /* EmotCore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		E20708B21D97D86E005DAC69 /* EmotCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EmotCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E20708B41D97D86E005DAC69 /* EmotCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmotCore.h; sourceTree = "<group>"; };
+		E20708B51D97D86E005DAC69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E20708C21D97D924005DAC69 /* Datasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Datasource.swift; sourceTree = "<group>"; };
+		E20708C31D97D924005DAC69 /* RealmModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
+		E20708C51D97D924005DAC69 /* emoji.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = emoji.json; sourceTree = "<group>"; };
+		E20708D11D97E08B005DAC69 /* EmojiOne-001.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "EmojiOne-001.xcassets"; sourceTree = "<group>"; };
+		E20708D21D97E08B005DAC69 /* EmojiOne-002.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "EmojiOne-002.xcassets"; sourceTree = "<group>"; };
+		E20708D31D97E08B005DAC69 /* EmojiOne-003.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "EmojiOne-003.xcassets"; sourceTree = "<group>"; };
 		E208C1D31D8DAE3C00138D57 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		E208C1D41D8DAE3C00138D57 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
-		E208C1DC1D8DB3E600138D57 /* emoji.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = emoji.json; path = Resources/emoji.json; sourceTree = "<group>"; };
-		E208C1DE1D8DB45300138D57 /* RealmModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RealmModel.swift; path = Datasource/RealmModel.swift; sourceTree = "<group>"; };
 		E209565A1D8B0808008871D7 /* Emoticon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Emoticon.swift; path = Model/Emoticon.swift; sourceTree = "<group>"; };
 		E209565C1D8B08EA008871D7 /* ColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorExtensions.swift; path = Extension/ColorExtensions.swift; sourceTree = "<group>"; };
-		E209565F1D8B0AE1008871D7 /* Datasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Datasource.swift; path = Datasource/Datasource.swift; sourceTree = "<group>"; };
 		E20956611D8B0CAC008871D7 /* EmoticonHistoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmoticonHistoryCell.swift; path = ViewController/EmoticonHistoryCell.swift; sourceTree = "<group>"; };
 		E22EC97C1D8E9E3200C66D30 /* FileManagerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FileManagerExtensions.swift; path = Extension/FileManagerExtensions.swift; sourceTree = "<group>"; };
 		E22EC97E1D8EF02C00C66D30 /* EmojiSearch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = EmojiSearch.storyboard; path = ViewController/EmojiSearch.storyboard; sourceTree = "<group>"; };
@@ -59,26 +92,69 @@
 		E246B01E1D966A5400421E04 /* SearchBarExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchBarExtensions.swift; path = Extension/SearchBarExtensions.swift; sourceTree = "<group>"; };
 		E246B0231D966FB200421E04 /* ApplicationTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApplicationTheme.swift; path = Theme/ApplicationTheme.swift; sourceTree = "<group>"; };
 		E246B0251D96918B00421E04 /* ViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewControllerExtensions.swift; path = Extension/ViewControllerExtensions.swift; sourceTree = "<group>"; };
-		E293221A1D8DB8C300B2CC3E /* EmojiOne-001.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = "EmojiOne-001.xcassets"; path = "EmojiOne/EmojiOne-001.xcassets"; sourceTree = "<group>"; };
-		E293221E1D8DB98500B2CC3E /* EmojiOne-002.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = "EmojiOne-002.xcassets"; path = "EmojiOne/EmojiOne-002.xcassets"; sourceTree = "<group>"; };
-		E29322201D8DBA0E00B2CC3E /* EmojiOne-003.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = "EmojiOne-003.xcassets"; path = "EmojiOne/EmojiOne-003.xcassets"; sourceTree = "<group>"; };
-		E2A17D321D88654800A18987 /* Pack001.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Pack001.xcassets; sourceTree = "<group>"; };
+		E2A17D321D88654800A18987 /* Placeholder.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Placeholder.xcassets; sourceTree = "<group>"; };
 		E2A17D351D886E3100A18987 /* ViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewExtensions.swift; path = Extension/ViewExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E20708AE1D97D86E005DAC69 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E20708BF1D97D898005DAC69 /* Realm.framework in Frameworks */,
+				E20708C01D97D898005DAC69 /* RealmSwift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E23308C21D885D4800476805 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2BB5C011D92245000FE0320 /* Realm.framework in Frameworks */,
-				E2BB5C021D92245000FE0320 /* RealmSwift.framework in Frameworks */,
+				E20708B91D97D86E005DAC69 /* EmotCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E20708B31D97D86E005DAC69 /* EmotCore */ = {
+			isa = PBXGroup;
+			children = (
+				E20708C11D97D924005DAC69 /* Datasource */,
+				E20708B41D97D86E005DAC69 /* EmotCore.h */,
+				E20708B51D97D86E005DAC69 /* Info.plist */,
+			);
+			path = EmotCore;
+			sourceTree = "<group>";
+		};
+		E20708C11D97D924005DAC69 /* Datasource */ = {
+			isa = PBXGroup;
+			children = (
+				E20708C21D97D924005DAC69 /* Datasource.swift */,
+				E20708C31D97D924005DAC69 /* RealmModel.swift */,
+				E20708C41D97D924005DAC69 /* Resources */,
+			);
+			path = Datasource;
+			sourceTree = "<group>";
+		};
+		E20708C41D97D924005DAC69 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E20708C51D97D924005DAC69 /* emoji.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E20708D01D97E08B005DAC69 /* EmojiOne */ = {
+			isa = PBXGroup;
+			children = (
+				E20708D11D97E08B005DAC69 /* EmojiOne-001.xcassets */,
+				E20708D21D97E08B005DAC69 /* EmojiOne-002.xcassets */,
+				E20708D31D97E08B005DAC69 /* EmojiOne-003.xcassets */,
+			);
+			path = EmojiOne;
+			sourceTree = "<group>";
+		};
 		E208C1CE1D8DA76100138D57 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
@@ -91,21 +167,11 @@
 		E208C1D71D8DB35900138D57 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				E20708D01D97E08B005DAC69 /* EmojiOne */,
 				E23308CF1D885D4800476805 /* Assets.xcassets */,
-				E2A17D321D88654800A18987 /* Pack001.xcassets */,
-				E293221A1D8DB8C300B2CC3E /* EmojiOne-001.xcassets */,
-				E293221E1D8DB98500B2CC3E /* EmojiOne-002.xcassets */,
-				E29322201D8DBA0E00B2CC3E /* EmojiOne-003.xcassets */,
+				E2A17D321D88654800A18987 /* Placeholder.xcassets */,
 			);
 			name = Assets;
-			sourceTree = "<group>";
-		};
-		E208C1D91D8DB37400138D57 /* Resource */ = {
-			isa = PBXGroup;
-			children = (
-				E208C1DC1D8DB3E600138D57 /* emoji.json */,
-			);
-			name = Resource;
 			sourceTree = "<group>";
 		};
 		E20956591D8B0755008871D7 /* Model */ = {
@@ -116,21 +182,12 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
-		E209565E1D8B0ABC008871D7 /* Datasource */ = {
-			isa = PBXGroup;
-			children = (
-				E208C1D91D8DB37400138D57 /* Resource */,
-				E209565F1D8B0AE1008871D7 /* Datasource.swift */,
-				E208C1DE1D8DB45300138D57 /* RealmModel.swift */,
-			);
-			name = Datasource;
-			sourceTree = "<group>";
-		};
 		E23308BC1D885D4800476805 = {
 			isa = PBXGroup;
 			children = (
 				E208C1CE1D8DA76100138D57 /* Dependencies */,
 				E23308C71D885D4800476805 /* Emotiphor */,
+				E20708B31D97D86E005DAC69 /* EmotCore */,
 				E23308C61D885D4800476805 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -139,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				E23308C51D885D4800476805 /* Emotiphor.app */,
+				E20708B21D97D86E005DAC69 /* EmotCore.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -148,7 +206,6 @@
 			children = (
 				E246B0201D966B4900421E04 /* Utils */,
 				E208C1D71D8DB35900138D57 /* Assets */,
-				E209565E1D8B0ABC008871D7 /* Datasource */,
 				E20956591D8B0755008871D7 /* Model */,
 				E2A17D341D886E0C00A18987 /* Extension */,
 				E23308DA1D885F9600476805 /* ViewController */,
@@ -219,7 +276,36 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		E20708AF1D97D86E005DAC69 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E20708B61D97D86E005DAC69 /* EmotCore.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		E20708B11D97D86E005DAC69 /* EmotCore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E20708BD1D97D86E005DAC69 /* Build configuration list for PBXNativeTarget "EmotCore" */;
+			buildPhases = (
+				E20708AD1D97D86E005DAC69 /* Sources */,
+				E20708AE1D97D86E005DAC69 /* Frameworks */,
+				E20708AF1D97D86E005DAC69 /* Headers */,
+				E20708B01D97D86E005DAC69 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EmotCore;
+			productName = EmotCore;
+			productReference = E20708B21D97D86E005DAC69 /* EmotCore.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		E23308C41D885D4800476805 /* Emotiphor */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E23308D71D885D4800476805 /* Build configuration list for PBXNativeTarget "Emotiphor" */;
@@ -228,10 +314,12 @@
 				E23308C21D885D4800476805 /* Frameworks */,
 				E23308C31D885D4800476805 /* Resources */,
 				E208C1CD1D8DA6DF00138D57 /* ShellScript */,
+				E20708BE1D97D86E005DAC69 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E20708B81D97D86E005DAC69 /* PBXTargetDependency */,
 			);
 			name = Emotiphor;
 			productName = Emotiphor;
@@ -248,6 +336,10 @@
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Rajmohan Kathiresan";
 				TargetAttributes = {
+					E20708B11D97D86E005DAC69 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
 					E23308C41D885D4800476805 = {
 						CreatedOnToolsVersion = 7.3.1;
 						LastSwiftMigration = 0800;
@@ -268,24 +360,32 @@
 			projectRoot = "";
 			targets = (
 				E23308C41D885D4800476805 /* Emotiphor */,
+				E20708B11D97D86E005DAC69 /* EmotCore */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		E20708B01D97D86E005DAC69 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E20708C81D97D924005DAC69 /* emoji.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E23308C31D885D4800476805 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2A17D331D88654800A18987 /* Pack001.xcassets in Resources */,
+				E2A17D331D88654800A18987 /* Placeholder.xcassets in Resources */,
 				E23308DC1D885FB600476805 /* Creator.storyboard in Resources */,
-				E208C1DD1D8DB3E600138D57 /* emoji.json in Resources */,
-				E293221F1D8DB98500B2CC3E /* EmojiOne-002.xcassets in Resources */,
-				E293221B1D8DB8C300B2CC3E /* EmojiOne-001.xcassets in Resources */,
 				E23308D31D885D4800476805 /* LaunchScreen.storyboard in Resources */,
+				E20708D51D97E08B005DAC69 /* EmojiOne-002.xcassets in Resources */,
+				E20708D41D97E08B005DAC69 /* EmojiOne-001.xcassets in Resources */,
 				E23308D01D885D4800476805 /* Assets.xcassets in Resources */,
-				E29322211D8DBA0E00B2CC3E /* EmojiOne-003.xcassets in Resources */,
 				E22EC97F1D8EF02C00C66D30 /* EmojiSearch.storyboard in Resources */,
+				E20708D61D97E08B005DAC69 /* EmojiOne-003.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,12 +410,20 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		E20708AD1D97D86E005DAC69 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E20708C61D97D924005DAC69 /* Datasource.swift in Sources */,
+				E20708C71D97D924005DAC69 /* RealmModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E23308C11D885D4800476805 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				E246B0181D965F9700421E04 /* RMLogger.swift in Sources */,
-				E20956601D8B0AE1008871D7 /* Datasource.swift in Sources */,
 				E20956621D8B0CAC008871D7 /* EmoticonHistoryCell.swift in Sources */,
 				E22EC9811D8F031A00C66D30 /* EmojiCell.swift in Sources */,
 				E22EC97D1D8E9E3200C66D30 /* FileManagerExtensions.swift in Sources */,
@@ -323,7 +431,6 @@
 				E246B01F1D966A5400421E04 /* SearchBarExtensions.swift in Sources */,
 				E209565D1D8B08EA008871D7 /* ColorExtensions.swift in Sources */,
 				E2A17D361D886E3100A18987 /* ViewExtensions.swift in Sources */,
-				E208C1DF1D8DB45300138D57 /* RealmModel.swift in Sources */,
 				E22EC9831D8F03BE00C66D30 /* SearchEmojiViewController.swift in Sources */,
 				E23308DE1D88608900476805 /* CreatorViewController.swift in Sources */,
 				E246B0241D966FB200421E04 /* ApplicationTheme.swift in Sources */,
@@ -333,6 +440,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E20708B81D97D86E005DAC69 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E20708B11D97D86E005DAC69 /* EmotCore */;
+			targetProxy = E20708B71D97D86E005DAC69 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		E23308D11D885D4800476805 /* LaunchScreen.storyboard */ = {
@@ -346,6 +461,63 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		E20708BB1D97D86E005DAC69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = EmotCore/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rajkm.EmotCore;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E20708BC1D97D86E005DAC69 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = EmotCore/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rajkm.EmotCore;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		E23308D51D885D4800476805 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -439,6 +611,7 @@
 		E23308D81D885D4800476805 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -455,6 +628,7 @@
 		E23308D91D885D4800476805 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -471,6 +645,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E20708BD1D97D86E005DAC69 /* Build configuration list for PBXNativeTarget "EmotCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E20708BB1D97D86E005DAC69 /* Debug */,
+				E20708BC1D97D86E005DAC69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E23308C01D885D4800476805 /* Build configuration list for PBXProject "Emotiphor" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

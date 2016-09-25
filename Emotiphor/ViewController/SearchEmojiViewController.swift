@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import EmotCore
 
 protocol SearchEmojiDelegate : class {
     func searchEmojiDidSelectEmoji(emoji:RMEmoji,sender:AnyObject?)
@@ -29,8 +30,8 @@ class SearchEmojiViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.emojiCollectionView.backgroundColor = UIColor.white
-        self.emojis = DataServices.shared.getEmojis()
         self.searchBar.becomeFirstResponder()
+        self.searchEmojis(forkeyword: "")
     }
 
     override func didReceiveMemoryWarning() {

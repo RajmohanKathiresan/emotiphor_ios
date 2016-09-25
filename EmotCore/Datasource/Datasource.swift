@@ -9,14 +9,13 @@
 import Foundation
 import RealmSwift
 
-class Datasource {
-    
+public class Datasource {
     
 }
 
-class DataServices {
+public class DataServices {
     
-    static let shared = DataServices()
+    public static let shared = DataServices()
     fileprivate init() {
         var config = Realm.Configuration()
         config.readOnly = false
@@ -29,10 +28,11 @@ class DataServices {
     
     
     /// Import emoji meta from Resource/emoji.JSON file
-    func importFromJSON() {
+    public func importFromJSON() {
    
         let realm = try! Realm()
-        let filePath = Bundle.main.path(forResource: "emoji", ofType: "json")
+        let filePath = Bundle(identifier: "com.rajkm.EmotCore")!.path(forResource: "emoji", ofType: "json")
+        print(filePath)
         do {
             let data = try Data(contentsOf: URL(fileURLWithPath: filePath!), options: .mappedIfSafe)
             if let emojiDict = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String:AnyObject] {
@@ -73,12 +73,12 @@ class DataServices {
         }
     }
     
-    func getEmojis() -> Results<RMEmoji> {
+    public func getEmojis() -> Results<RMEmoji> {
         let realm = try! Realm()
         return realm.objects(RMEmoji.self)
     }
     
-    func searchEmojis(forKeyword keyword:String) -> Results<RMEmoji>! {
+    public func searchEmojis(forKeyword keyword:String) -> Results<RMEmoji>! {
         let realm = try! Realm()
         var results:Results<RMEmoji>!
         let processedKeyword = keyword.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
