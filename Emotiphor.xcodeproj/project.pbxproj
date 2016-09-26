@@ -17,7 +17,6 @@
 		E20708C81D97D924005DAC69 /* emoji.json in Resources */ = {isa = PBXBuildFile; fileRef = E20708C51D97D924005DAC69 /* emoji.json */; };
 		E20708D41D97E08B005DAC69 /* EmojiOne-001.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E20708D11D97E08B005DAC69 /* EmojiOne-001.xcassets */; };
 		E20708D51D97E08B005DAC69 /* EmojiOne-002.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E20708D21D97E08B005DAC69 /* EmojiOne-002.xcassets */; };
-		E20708D61D97E08B005DAC69 /* EmojiOne-003.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E20708D31D97E08B005DAC69 /* EmojiOne-003.xcassets */; };
 		E209565B1D8B0808008871D7 /* Emoticon.swift in Sources */ = {isa = PBXBuildFile; fileRef = E209565A1D8B0808008871D7 /* Emoticon.swift */; };
 		E209565D1D8B08EA008871D7 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E209565C1D8B08EA008871D7 /* ColorExtensions.swift */; };
 		E20956621D8B0CAC008871D7 /* EmoticonHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20956611D8B0CAC008871D7 /* EmoticonHistoryCell.swift */; };
@@ -71,7 +70,6 @@
 		E20708C51D97D924005DAC69 /* emoji.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = emoji.json; sourceTree = "<group>"; };
 		E20708D11D97E08B005DAC69 /* EmojiOne-001.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "EmojiOne-001.xcassets"; sourceTree = "<group>"; };
 		E20708D21D97E08B005DAC69 /* EmojiOne-002.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "EmojiOne-002.xcassets"; sourceTree = "<group>"; };
-		E20708D31D97E08B005DAC69 /* EmojiOne-003.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "EmojiOne-003.xcassets"; sourceTree = "<group>"; };
 		E208C1D31D8DAE3C00138D57 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		E208C1D41D8DAE3C00138D57 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		E209565A1D8B0808008871D7 /* Emoticon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Emoticon.swift; path = Model/Emoticon.swift; sourceTree = "<group>"; };
@@ -150,7 +148,6 @@
 			children = (
 				E20708D11D97E08B005DAC69 /* EmojiOne-001.xcassets */,
 				E20708D21D97E08B005DAC69 /* EmojiOne-002.xcassets */,
-				E20708D31D97E08B005DAC69 /* EmojiOne-003.xcassets */,
 			);
 			path = EmojiOne;
 			sourceTree = "<group>";
@@ -385,7 +382,6 @@
 				E20708D41D97E08B005DAC69 /* EmojiOne-001.xcassets in Resources */,
 				E23308D01D885D4800476805 /* Assets.xcassets in Resources */,
 				E22EC97F1D8EF02C00C66D30 /* EmojiSearch.storyboard in Resources */,
-				E20708D61D97E08B005DAC69 /* EmojiOne-003.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
