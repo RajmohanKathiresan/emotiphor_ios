@@ -11,7 +11,7 @@
         <scene sceneID="8he-4V-93r">
             <objects>
                 <navigationController title="EmotiPhor" id="jSD-4w-pUs" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="JY6-99-4Em">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="JY6-99-4Em">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.2691360458" green="0.093217687940000002" blue="0.43337673609999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -38,8 +38,8 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JLJ-it-fJ4" userLabel="Editor">
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sF3-zd-d4w">
-                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="happy" translatesAutoresizingMaskIntoConstraints="NO" id="sF3-zd-d4w" customClass="happy">
+                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="64" id="gck-gf-Rma"/>
                                             <constraint firstAttribute="width" constant="64" id="t6J-st-HoC"/>

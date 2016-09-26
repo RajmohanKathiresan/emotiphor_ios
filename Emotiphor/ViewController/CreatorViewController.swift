@@ -23,6 +23,7 @@ class CreatorViewController : UIViewController {
         let searchButton = UIBarButtonItem(image: UIImage(named:"search"), style: .plain, target: self, action: #selector(CreatorViewController.searchTapAction(_:)))
         searchButton.tintColor = UIColor.white
         self.navigationItem.rightBarButtonItem = searchButton
+        self.emoticonView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(CreatorViewController.changeEmojiAction(gesture:))))
     }
     
     fileprivate func applyTheme() {
@@ -30,6 +31,7 @@ class CreatorViewController : UIViewController {
         let navigationBar = self.navigationController?.navigationBar
         navigationBar?.backgroundColor = ApplicationTheme.color()
         navigationBar?.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
+        self.emoticonView.tintColor = UIColor.lightGray
     }
     
     fileprivate func addToHistory(emoji:RMEmoji) {
@@ -87,6 +89,16 @@ class CreatorViewController : UIViewController {
     }
     
     func searchTapAction(_:UIBarButtonItem) {
+        self.searchEmoji()
+    }
+    
+    func changeEmojiAction(gesture:UITapGestureRecognizer) {
+        if gesture.state == .ended {
+            self.searchEmoji()
+        }
+    }
+    
+    private func searchEmoji() {
         let searchVC = UIViewController.GetViewController(instoryboard: SearchEmojiViewController.kStoryboardName, withController: SearchEmojiViewController.kControllerIdentifier) as! SearchEmojiViewController
         searchVC.delegate = self
         self.present(searchVC, animated: true, completion: nil)
