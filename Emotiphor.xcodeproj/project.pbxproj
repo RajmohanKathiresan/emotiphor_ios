@@ -10,8 +10,6 @@
 		E20708B61D97D86E005DAC69 /* EmotCore.h in Headers */ = {isa = PBXBuildFile; fileRef = E20708B41D97D86E005DAC69 /* EmotCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E20708B91D97D86E005DAC69 /* EmotCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E20708B21D97D86E005DAC69 /* EmotCore.framework */; };
 		E20708BA1D97D86E005DAC69 /* EmotCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E20708B21D97D86E005DAC69 /* EmotCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		E20708BF1D97D898005DAC69 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E208C1D31D8DAE3C00138D57 /* Realm.framework */; };
-		E20708C01D97D898005DAC69 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E208C1D41D8DAE3C00138D57 /* RealmSwift.framework */; };
 		E20708C61D97D924005DAC69 /* Datasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20708C21D97D924005DAC69 /* Datasource.swift */; };
 		E20708C71D97D924005DAC69 /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20708C31D97D924005DAC69 /* RealmModel.swift */; };
 		E20708C81D97D924005DAC69 /* emoji.json in Resources */ = {isa = PBXBuildFile; fileRef = E20708C51D97D924005DAC69 /* emoji.json */; };
@@ -70,8 +68,6 @@
 		E20708C51D97D924005DAC69 /* emoji.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = emoji.json; sourceTree = "<group>"; };
 		E20708D11D97E08B005DAC69 /* EmojiOne-001.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "EmojiOne-001.xcassets"; sourceTree = "<group>"; };
 		E20708D21D97E08B005DAC69 /* EmojiOne-002.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "EmojiOne-002.xcassets"; sourceTree = "<group>"; };
-		E208C1D31D8DAE3C00138D57 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
-		E208C1D41D8DAE3C00138D57 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		E209565A1D8B0808008871D7 /* Emoticon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Emoticon.swift; path = Model/Emoticon.swift; sourceTree = "<group>"; };
 		E209565C1D8B08EA008871D7 /* ColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorExtensions.swift; path = Extension/ColorExtensions.swift; sourceTree = "<group>"; };
 		E20956611D8B0CAC008871D7 /* EmoticonHistoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmoticonHistoryCell.swift; path = ViewController/EmoticonHistoryCell.swift; sourceTree = "<group>"; };
@@ -99,8 +95,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E20708BF1D97D898005DAC69 /* Realm.framework in Frameworks */,
-				E20708C01D97D898005DAC69 /* RealmSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,15 +146,6 @@
 			path = EmojiOne;
 			sourceTree = "<group>";
 		};
-		E208C1CE1D8DA76100138D57 /* Dependencies */ = {
-			isa = PBXGroup;
-			children = (
-				E208C1D31D8DAE3C00138D57 /* Realm.framework */,
-				E208C1D41D8DAE3C00138D57 /* RealmSwift.framework */,
-			);
-			name = Dependencies;
-			sourceTree = "<group>";
-		};
 		E208C1D71D8DB35900138D57 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
@@ -182,7 +167,6 @@
 		E23308BC1D885D4800476805 = {
 			isa = PBXGroup;
 			children = (
-				E208C1CE1D8DA76100138D57 /* Dependencies */,
 				E23308C71D885D4800476805 /* Emotiphor */,
 				E20708B31D97D86E005DAC69 /* EmotCore */,
 				E23308C61D885D4800476805 /* Products */,
@@ -310,7 +294,6 @@
 				E23308C11D885D4800476805 /* Sources */,
 				E23308C21D885D4800476805 /* Frameworks */,
 				E23308C31D885D4800476805 /* Resources */,
-				E208C1CD1D8DA6DF00138D57 /* ShellScript */,
 				E20708BE1D97D86E005DAC69 /* Embed Frameworks */,
 			);
 			buildRules = (
@@ -386,24 +369,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		E208C1CD1D8DA6DF00138D57 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E20708AD1D97D86E005DAC69 /* Sources */ = {
