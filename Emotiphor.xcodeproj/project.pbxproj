@@ -332,6 +332,7 @@
 				E20708BE1D97D86E005DAC69 /* Embed Frameworks */,
 				B3176BDC7F5EEA4F8FC0CDDE /* [CP] Embed Pods Frameworks */,
 				077C3DA9C37577BFD2215327 /* [CP] Copy Pods Resources */,
+				E2B7D35A1DB4D69100EAC022 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -467,6 +468,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Emotiphor/Pods-Emotiphor-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		E2B7D35A1DB4D69100EAC022 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 732cf10fa26516911464a01be24a54f02f072d0f 496fd352fcb22d0c21aa17e7956dfc8d901472af0a8355a383fcde0fa56fd6dc";
 		};
 		FE4D6AD9B74CFB3B8271010B /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
