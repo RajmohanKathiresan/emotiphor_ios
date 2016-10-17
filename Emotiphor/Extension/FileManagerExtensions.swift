@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Extension to get documents directory path
+*/
 extension FileManager {
     
     static func getDocumentsDirectoryPath() -> URL {

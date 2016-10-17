@@ -6,8 +6,13 @@
 //  Copyright © 2016 Rajmohan Kathiresan. All rights reserved.
 //
 
+
 import UIKit
 
+/**
+ Extension to make rounded rect view with provided corner radius
+ Storyboard complaint for real time preview
+*/
 @IBDesignable
 class RoundedRectView : UIView {
     
@@ -22,11 +27,15 @@ class RoundedRectView : UIView {
     }
 }
 
+/**
+    Extension to make rounded view
+    Usage: User profile picture view
+ */
 class RoundedView : UIView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.layer.cornerRadius = self.bounds.size.width
+        self.layer.cornerRadius = self.bounds.size.width/2.0
     }
 }
 
