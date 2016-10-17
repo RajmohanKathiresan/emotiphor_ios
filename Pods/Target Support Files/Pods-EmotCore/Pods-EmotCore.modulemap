@@ -1,0 +1,6 @@
+framework module Pods_EmotCore {
+  umbrella header "Pods-EmotCore-umbrella.h"
+
+  export *
+  module * { export * }
+}
