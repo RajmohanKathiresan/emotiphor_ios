@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--EmojiWall-->
+        <scene sceneID="UXF-hl-CMp">
+            <objects>
+                <viewController storyboardIdentifier="EmojiWallCreatorViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qjU-5C-JO3" customClass="EmojiWallCreatorViewController" customModule="Emotiphor" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zra-Yb-uBp"/>
+                        <viewControllerLayoutGuide type="bottom" id="TyH-1X-LmG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UuK-7F-QOP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9en-4r-pjc">
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="xaW-bM-sf2">
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nTh-Fa-dD0">
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="xaW-bM-sf2" firstAttribute="leading" secondItem="9en-4r-pjc" secondAttribute="leading" id="34E-pQ-yVz"/>
+                                    <constraint firstItem="xaW-bM-sf2" firstAttribute="top" secondItem="9en-4r-pjc" secondAttribute="top" id="Gw7-ac-YiN"/>
+                                    <constraint firstAttribute="bottom" secondItem="xaW-bM-sf2" secondAttribute="bottom" id="JKr-wk-Cx1"/>
+                                    <constraint firstAttribute="trailing" secondItem="xaW-bM-sf2" secondAttribute="trailing" id="deG-f4-Fvk"/>
+                                    <constraint firstAttribute="height" constant="60" id="dmw-7l-4FM"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qbe-3t-vxr">
+                                <color key="backgroundColor" red="1" green="0.97504783163265307" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qbe-3t-vxr" firstAttribute="top" secondItem="9en-4r-pjc" secondAttribute="bottom" constant="8" id="5OO-SX-vkx"/>
+                            <constraint firstItem="9en-4r-pjc" firstAttribute="leading" secondItem="UuK-7F-QOP" secondAttribute="leading" id="KaL-gx-zN7"/>
+                            <constraint firstItem="qbe-3t-vxr" firstAttribute="leading" secondItem="UuK-7F-QOP" secondAttribute="leading" constant="20" id="LJ2-v4-MdP"/>
+                            <constraint firstItem="TyH-1X-LmG" firstAttribute="top" secondItem="qbe-3t-vxr" secondAttribute="bottom" constant="20" id="V8l-To-rjf"/>
+                            <constraint firstItem="9en-4r-pjc" firstAttribute="top" secondItem="zra-Yb-uBp" secondAttribute="bottom" id="VWP-f8-edi"/>
+                            <constraint firstAttribute="trailing" secondItem="qbe-3t-vxr" secondAttribute="trailing" constant="20" id="d5E-bY-dRA"/>
+                            <constraint firstAttribute="trailing" secondItem="9en-4r-pjc" secondAttribute="trailing" id="jAn-7L-uor"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="EmojiWall" id="DNT-gG-BKf">
+                        <barButtonItem key="leftBarButtonItem" image="back_circle" id="8h6-dH-mwc"/>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="backBarbutton" destination="8h6-dH-mwc" id="PJ9-Bu-OLf"/>
+                        <outlet property="wallView" destination="qbe-3t-vxr" id="ggq-HO-7nh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bUx-oI-sQI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="167" y="233"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="back_circle" width="24" height="24"/>
+    </resources>
+</document>

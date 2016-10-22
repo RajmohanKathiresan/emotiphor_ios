@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zT7-CP-u7x">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Jackdaws Love St.ttf">
+            <string>JackdawsLoveSt</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="iVs-aA-Qxe">
+            <objects>
+                <navigationController id="zT7-CP-u7x" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="8pn-hr-7te">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.2691360458" green="0.093217687940000002" blue="0.43337673609999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="aWz-tZ-Pc8" kind="relationship" relationship="rootViewController" id="BbR-yn-AdS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FMA-G6-ufh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1022" y="164"/>
+        </scene>
+        <!--Emotiphor-->
+        <scene sceneID="7AF-WU-FUH">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" title="Emotiphor" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aWz-tZ-Pc8" customClass="HomeViewController" customModule="Emotiphor" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="biS-dz-6vd"/>
+                        <viewControllerLayoutGuide type="bottom" id="xTC-Ts-zqb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="W7x-d0-7GM">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k01-1V-BOq">
+                                <subviews>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bPy-20-jK1">
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nJz-zO-khz">
+                                            <size key="itemSize" width="180" height="180"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeMenuCell" id="wZd-l9-ezX" customClass="HomeMenuCell" customModule="Emotiphor" customModuleProvider="target">
+                                                <rect key="frame" x="62" y="0.0" width="180" height="180"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                    <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vXN-kr-z7y">
+                                                            <subviews>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ddM-UB-7Ka" userLabel="bottomview">
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Emoji Collage" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZcO-C1-8Si">
+                                                                            <fontDescription key="fontDescription" name="JackdawsLoveSt" family="Jackdaws Love St" pointSize="15"/>
+                                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                    <color key="backgroundColor" red="0.95726562500000001" green="0.95726562500000001" blue="0.95726562500000001" alpha="0.20952181208053691" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="trailing" secondItem="ZcO-C1-8Si" secondAttribute="trailing" constant="4" id="JFJ-cc-pHg"/>
+                                                                        <constraint firstItem="ZcO-C1-8Si" firstAttribute="leading" secondItem="ddM-UB-7Ka" secondAttribute="leading" constant="4" id="K1y-mo-bdo"/>
+                                                                        <constraint firstItem="ZcO-C1-8Si" firstAttribute="top" secondItem="ddM-UB-7Ka" secondAttribute="top" constant="4" id="MKG-TR-gIp"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="ZcO-C1-8Si" secondAttribute="bottom" constant="4" id="NWQ-XP-aph"/>
+                                                                        <constraint firstAttribute="height" constant="36" id="zHK-1R-PeO"/>
+                                                                    </constraints>
+                                                                </view>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="robot" translatesAutoresizingMaskIntoConstraints="NO" id="QrX-tz-SD6" userLabel="icon">
+                                                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="60" id="ajF-5T-FVh"/>
+                                                                        <constraint firstAttribute="height" constant="60" id="f8x-Lr-fGP"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                            </subviews>
+                                                            <color key="backgroundColor" red="0.396078431372549" green="0.44705882352941173" blue="0.72156862745098038" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="trailing" secondItem="ddM-UB-7Ka" secondAttribute="trailing" id="5he-5J-DiD"/>
+                                                                <constraint firstItem="QrX-tz-SD6" firstAttribute="centerX" secondItem="vXN-kr-z7y" secondAttribute="centerX" id="H2i-9b-uIV"/>
+                                                                <constraint firstItem="ddM-UB-7Ka" firstAttribute="leading" secondItem="vXN-kr-z7y" secondAttribute="leading" id="Isd-Np-JEf"/>
+                                                                <constraint firstAttribute="bottom" secondItem="ddM-UB-7Ka" secondAttribute="bottom" id="UR7-VP-NSv"/>
+                                                                <constraint firstItem="QrX-tz-SD6" firstAttribute="centerY" secondItem="vXN-kr-z7y" secondAttribute="centerY" constant="-16" id="a8y-jP-aIc"/>
+                                                                <constraint firstItem="ddM-UB-7Ka" firstAttribute="top" relation="greaterThanOrEqual" secondItem="QrX-tz-SD6" secondAttribute="bottom" constant="4" id="igg-Dc-hkx"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                </view>
+                                                <constraints>
+                                                    <constraint firstItem="vXN-kr-z7y" firstAttribute="top" secondItem="wZd-l9-ezX" secondAttribute="top" id="2IB-0Q-HT7"/>
+                                                    <constraint firstAttribute="trailing" secondItem="vXN-kr-z7y" secondAttribute="trailing" id="BHP-rU-Eld"/>
+                                                    <constraint firstAttribute="bottom" secondItem="vXN-kr-z7y" secondAttribute="bottom" id="QhA-Uc-pyf"/>
+                                                    <constraint firstItem="vXN-kr-z7y" firstAttribute="leading" secondItem="wZd-l9-ezX" secondAttribute="leading" id="qlP-cB-jjl"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="iconImageView" destination="QrX-tz-SD6" id="Cqx-cT-YD9"/>
+                                                    <outlet property="rootView" destination="vXN-kr-z7y" id="73V-31-O59"/>
+                                                    <outlet property="titleLabel" destination="ZcO-C1-8Si" id="PxO-VK-UI0"/>
+                                                </connections>
+                                            </collectionViewCell>
+                                        </cells>
+                                        <connections>
+                                            <outlet property="dataSource" destination="aWz-tZ-Pc8" id="Lkr-1B-seq"/>
+                                            <outlet property="delegate" destination="aWz-tZ-Pc8" id="pQX-hA-qWc"/>
+                                        </connections>
+                                    </collectionView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="bPy-20-jK1" secondAttribute="bottom" constant="8" id="2rQ-I8-shb"/>
+                                    <constraint firstAttribute="trailing" secondItem="bPy-20-jK1" secondAttribute="trailing" constant="8" id="4WS-n4-3x9"/>
+                                    <constraint firstItem="bPy-20-jK1" firstAttribute="top" secondItem="k01-1V-BOq" secondAttribute="top" constant="8" id="HMh-qi-a86"/>
+                                    <constraint firstItem="bPy-20-jK1" firstAttribute="leading" secondItem="k01-1V-BOq" secondAttribute="leading" constant="8" id="v6u-to-jeE"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="k01-1V-BOq" secondAttribute="trailing" id="4FB-fE-ihf"/>
+                            <constraint firstItem="xTC-Ts-zqb" firstAttribute="top" secondItem="k01-1V-BOq" secondAttribute="bottom" id="VFZ-ZI-Vbg"/>
+                            <constraint firstItem="k01-1V-BOq" firstAttribute="top" secondItem="biS-dz-6vd" secondAttribute="bottom" id="Xvh-tH-T66"/>
+                            <constraint firstItem="k01-1V-BOq" firstAttribute="leading" secondItem="W7x-d0-7GM" secondAttribute="leading" id="c3n-1q-ma1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="cEZ-av-6gf"/>
+                    <connections>
+                        <outlet property="menuCollectionView" destination="bPy-20-jK1" id="WDY-zo-Jmh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ubT-fl-qe4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-193.125" y="162.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="robot" width="80" height="80"/>
+    </resources>
+</document>

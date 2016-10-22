@@ -11,19 +11,29 @@ import EmotCore
 
 class CreatorViewController : UIViewController {
     
+    static let kStoryboardName = "Creator"
+    static let kControllerIdentifier = "CreatorViewController"
+    
     @IBOutlet weak var emoticonView: UIImageView!
     @IBOutlet weak var historyCollectionView: UICollectionView!
+    @IBOutlet weak var backBarButton: UIBarButtonItem!
     
     var history:[RMEmoji] = [RMEmoji]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Emotiphor"
+        self.title = "Collage"
         self.applyTheme()
+        self.backBarButton.target = self
+        self.backBarButton.action = #selector(self.backAction(_:))
         let searchButton = UIBarButtonItem(image: UIImage(named:"search"), style: .plain, target: self, action: #selector(CreatorViewController.searchTapAction(_:)))
         searchButton.tintColor = UIColor.white
         self.navigationItem.rightBarButtonItem = searchButton
         self.emoticonView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(CreatorViewController.changeEmojiAction(gesture:))))
+    }
+    
+    @objc fileprivate func backAction(_ sender:AnyObject?) {
+        self.navigationController?.popViewController(animated: true)
     }
     
     fileprivate func applyTheme() {

@@ -32,8 +32,15 @@
 		E246B01F1D966A5400421E04 /* SearchBarExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E246B01E1D966A5400421E04 /* SearchBarExtensions.swift */; };
 		E246B0241D966FB200421E04 /* ApplicationTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E246B0231D966FB200421E04 /* ApplicationTheme.swift */; };
 		E246B0261D96918B00421E04 /* ViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E246B0251D96918B00421E04 /* ViewControllerExtensions.swift */; };
+		E29A9CD71DBB08F90061C7A0 /* Jackdaws Love St.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E29A9CD61DBB08F90061C7A0 /* Jackdaws Love St.ttf */; };
+		E29A9CD91DBB0A430061C7A0 /* HomeMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29A9CD81DBB0A430061C7A0 /* HomeMenuCell.swift */; };
+		E29A9CDB1DBB0AC50061C7A0 /* HomeMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29A9CDA1DBB0AC50061C7A0 /* HomeMenu.swift */; };
+		E29A9CDD1DBB17D10061C7A0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29A9CDC1DBB17D10061C7A0 /* HomeViewController.swift */; };
+		E29A9CE01DBB7D830061C7A0 /* EmojiWallCreator.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E29A9CDF1DBB7D830061C7A0 /* EmojiWallCreator.storyboard */; };
+		E29A9CE21DBB865F0061C7A0 /* EmojiWallCreatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29A9CE11DBB865F0061C7A0 /* EmojiWallCreatorViewController.swift */; };
 		E2A17D331D88654800A18987 /* Placeholder.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2A17D321D88654800A18987 /* Placeholder.xcassets */; };
 		E2A17D361D886E3100A18987 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A17D351D886E3100A18987 /* ViewExtensions.swift */; };
+		E2B7D35D1DB502F600EAC022 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2B7D35C1DB502F600EAC022 /* Home.storyboard */; };
 		E469CB70D57D1C8E4021FD4E /* Pods_Emotiphor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DD12C633D4F144397B68326 /* Pods_Emotiphor.framework */; };
 /* End PBXBuildFile section */
 
@@ -94,8 +101,15 @@
 		E246B01E1D966A5400421E04 /* SearchBarExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchBarExtensions.swift; path = Extension/SearchBarExtensions.swift; sourceTree = "<group>"; };
 		E246B0231D966FB200421E04 /* ApplicationTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApplicationTheme.swift; path = Theme/ApplicationTheme.swift; sourceTree = "<group>"; };
 		E246B0251D96918B00421E04 /* ViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewControllerExtensions.swift; path = Extension/ViewControllerExtensions.swift; sourceTree = "<group>"; };
+		E29A9CD61DBB08F90061C7A0 /* Jackdaws Love St.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jackdaws Love St.ttf"; sourceTree = "<group>"; };
+		E29A9CD81DBB0A430061C7A0 /* HomeMenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeMenuCell.swift; path = ViewController/HomeMenuCell.swift; sourceTree = "<group>"; };
+		E29A9CDA1DBB0AC50061C7A0 /* HomeMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeMenu.swift; path = Model/HomeMenu.swift; sourceTree = "<group>"; };
+		E29A9CDC1DBB17D10061C7A0 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = ViewController/HomeViewController.swift; sourceTree = "<group>"; };
+		E29A9CDF1DBB7D830061C7A0 /* EmojiWallCreator.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = EmojiWallCreator.storyboard; path = ViewController/EmojiWallCreator.storyboard; sourceTree = "<group>"; };
+		E29A9CE11DBB865F0061C7A0 /* EmojiWallCreatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmojiWallCreatorViewController.swift; path = ViewController/EmojiWallCreatorViewController.swift; sourceTree = "<group>"; };
 		E2A17D321D88654800A18987 /* Placeholder.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Placeholder.xcassets; sourceTree = "<group>"; };
 		E2A17D351D886E3100A18987 /* ViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewExtensions.swift; path = Extension/ViewExtensions.swift; sourceTree = "<group>"; };
+		E2B7D35C1DB502F600EAC022 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Home.storyboard; path = ViewController/Home.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +184,7 @@
 		E208C1D71D8DB35900138D57 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				E29A9CD51DBB08EA0061C7A0 /* Fonts */,
 				E20708D01D97E08B005DAC69 /* EmojiOne */,
 				E23308CF1D885D4800476805 /* Assets.xcassets */,
 				E2A17D321D88654800A18987 /* Placeholder.xcassets */,
@@ -181,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				E209565A1D8B0808008871D7 /* Emoticon.swift */,
+				E29A9CDA1DBB0AC50061C7A0 /* HomeMenu.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -223,6 +239,7 @@
 		E23308DA1D885F9600476805 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				E2B7D35B1DB5028C00EAC022 /* Home */,
 				E246B0161D965E1200421E04 /* History */,
 				E246B0151D965E0300421E04 /* Creator */,
 				E246B0141D965DE500421E04 /* Search */,
@@ -245,6 +262,8 @@
 			children = (
 				E23308DB1D885FB600476805 /* Creator.storyboard */,
 				E23308DD1D88608900476805 /* CreatorViewController.swift */,
+				E29A9CDF1DBB7D830061C7A0 /* EmojiWallCreator.storyboard */,
+				E29A9CE11DBB865F0061C7A0 /* EmojiWallCreatorViewController.swift */,
 			);
 			name = Creator;
 			sourceTree = "<group>";
@@ -265,6 +284,14 @@
 			name = Utils;
 			sourceTree = "<group>";
 		};
+		E29A9CD51DBB08EA0061C7A0 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E29A9CD61DBB08F90061C7A0 /* Jackdaws Love St.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
 		E2A17D341D886E0C00A18987 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -276,6 +303,16 @@
 				E246B0251D96918B00421E04 /* ViewControllerExtensions.swift */,
 			);
 			name = Extension;
+			sourceTree = "<group>";
+		};
+		E2B7D35B1DB5028C00EAC022 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E2B7D35C1DB502F600EAC022 /* Home.storyboard */,
+				E29A9CD81DBB0A430061C7A0 /* HomeMenuCell.swift */,
+				E29A9CDC1DBB17D10061C7A0 /* HomeViewController.swift */,
+			);
+			name = Home;
 			sourceTree = "<group>";
 		};
 		F7A9EA71FE27C629B00C5172 /* Frameworks */ = {
@@ -398,11 +435,14 @@
 			files = (
 				E2A17D331D88654800A18987 /* Placeholder.xcassets in Resources */,
 				E23308DC1D885FB600476805 /* Creator.storyboard in Resources */,
+				E29A9CD71DBB08F90061C7A0 /* Jackdaws Love St.ttf in Resources */,
 				E23308D31D885D4800476805 /* LaunchScreen.storyboard in Resources */,
+				E29A9CE01DBB7D830061C7A0 /* EmojiWallCreator.storyboard in Resources */,
 				E20708D51D97E08B005DAC69 /* EmojiOne-002.xcassets in Resources */,
 				E20708D41D97E08B005DAC69 /* EmojiOne-001.xcassets in Resources */,
 				E23308D01D885D4800476805 /* Assets.xcassets in Resources */,
 				E22EC97F1D8EF02C00C66D30 /* EmojiSearch.storyboard in Resources */,
+				E2B7D35D1DB502F600EAC022 /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,15 +553,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E29A9CDB1DBB0AC50061C7A0 /* HomeMenu.swift in Sources */,
 				E246B0181D965F9700421E04 /* RMLogger.swift in Sources */,
 				E20956621D8B0CAC008871D7 /* EmoticonHistoryCell.swift in Sources */,
 				E22EC9811D8F031A00C66D30 /* EmojiCell.swift in Sources */,
 				E22EC97D1D8E9E3200C66D30 /* FileManagerExtensions.swift in Sources */,
 				E23308C91D885D4800476805 /* AppDelegate.swift in Sources */,
+				E29A9CD91DBB0A430061C7A0 /* HomeMenuCell.swift in Sources */,
 				E246B01F1D966A5400421E04 /* SearchBarExtensions.swift in Sources */,
 				E209565D1D8B08EA008871D7 /* ColorExtensions.swift in Sources */,
+				E29A9CE21DBB865F0061C7A0 /* EmojiWallCreatorViewController.swift in Sources */,
 				E2A17D361D886E3100A18987 /* ViewExtensions.swift in Sources */,
 				E22EC9831D8F03BE00C66D30 /* SearchEmojiViewController.swift in Sources */,
+				E29A9CDD1DBB17D10061C7A0 /* HomeViewController.swift in Sources */,
 				E23308DE1D88608900476805 /* CreatorViewController.swift in Sources */,
 				E246B0241D966FB200421E04 /* ApplicationTheme.swift in Sources */,
 				E246B0261D96918B00421E04 /* ViewControllerExtensions.swift in Sources */,

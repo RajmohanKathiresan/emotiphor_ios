@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jSD-4w-pUs">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jSD-4w-pUs">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -27,7 +27,7 @@
         <!--Emotiphor-->
         <scene sceneID="NNk-Nx-b8H">
             <objects>
-                <viewController id="NaG-kx-TOz" customClass="CreatorViewController" customModule="Emotiphor" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CreatorViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NaG-kx-TOz" customClass="CreatorViewController" customModule="Emotiphor" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="X1R-r2-Mei"/>
                         <viewControllerLayoutGuide type="bottom" id="7Bq-Dj-0rv"/>
@@ -113,9 +113,15 @@
                             <constraint firstItem="JLJ-it-fJ4" firstAttribute="height" secondItem="mdG-gZ-fLA" secondAttribute="height" multiplier="0.45" id="tjw-dp-OEj"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Emotiphor" id="zeA-kr-l6R"/>
+                    <navigationItem key="navigationItem" title="Emotiphor" id="zeA-kr-l6R">
+                        <barButtonItem key="leftBarButtonItem" image="back_circle" id="J5U-Pb-AIR"/>
+                        <connections>
+                            <outlet property="backBarButtonItem" destination="J5U-Pb-AIR" id="vhK-2E-Dza"/>
+                        </connections>
+                    </navigationItem>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
+                        <outlet property="backBarButton" destination="J5U-Pb-AIR" id="6y6-qe-ccH"/>
                         <outlet property="emoticonView" destination="sF3-zd-d4w" id="5bl-aK-few"/>
                         <outlet property="historyCollectionView" destination="J9X-xx-HlR" id="rdm-aK-4P1"/>
                     </connections>
@@ -126,6 +132,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="back_circle" width="24" height="24"/>
         <image name="happy" width="60" height="60"/>
     </resources>
 </document>
