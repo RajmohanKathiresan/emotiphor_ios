@@ -15,7 +15,7 @@
                         <viewControllerLayoutGuide type="bottom" id="TyH-1X-LmG"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="UuK-7F-QOP">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qbe-3t-vxr">
@@ -48,7 +48,7 @@
                                     <constraint firstAttribute="bottom" secondItem="9AK-XS-Vx9" secondAttribute="bottom" id="3gl-GG-fQW"/>
                                     <constraint firstItem="9AK-XS-Vx9" firstAttribute="top" secondItem="bx7-Xk-y3l" secondAttribute="top" id="ADg-e7-y7h"/>
                                     <constraint firstAttribute="trailing" secondItem="9AK-XS-Vx9" secondAttribute="trailing" id="R5H-VX-YkG"/>
-                                    <constraint firstAttribute="height" constant="60" id="Sfp-sn-RN6"/>
+                                    <constraint firstAttribute="height" id="Sfp-sn-RN6"/>
                                     <constraint firstItem="9AK-XS-Vx9" firstAttribute="leading" secondItem="bx7-Xk-y3l" secondAttribute="leading" id="llQ-1N-3Pe"/>
                                 </constraints>
                             </view>
@@ -56,9 +56,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="bx7-Xk-y3l" firstAttribute="leading" secondItem="UuK-7F-QOP" secondAttribute="leading" id="21z-kS-oaI"/>
-                            <constraint firstItem="qbe-3t-vxr" firstAttribute="leading" secondItem="UuK-7F-QOP" secondAttribute="leading" constant="20" id="LJ2-v4-MdP"/>
-                            <constraint firstItem="TyH-1X-LmG" firstAttribute="top" secondItem="qbe-3t-vxr" secondAttribute="bottom" constant="60" id="V8l-To-rjf"/>
-                            <constraint firstAttribute="trailing" secondItem="qbe-3t-vxr" secondAttribute="trailing" constant="20" id="d5E-bY-dRA"/>
+                            <constraint firstItem="qbe-3t-vxr" firstAttribute="leading" secondItem="UuK-7F-QOP" secondAttribute="leading" constant="4" id="LJ2-v4-MdP"/>
+                            <constraint firstItem="TyH-1X-LmG" firstAttribute="top" secondItem="qbe-3t-vxr" secondAttribute="bottom" constant="4" id="V8l-To-rjf"/>
+                            <constraint firstAttribute="trailing" secondItem="qbe-3t-vxr" secondAttribute="trailing" constant="4" id="d5E-bY-dRA"/>
                             <constraint firstItem="qbe-3t-vxr" firstAttribute="top" secondItem="zra-Yb-uBp" secondAttribute="bottom" constant="8" id="hl6-4u-ITN"/>
                             <constraint firstAttribute="trailing" secondItem="bx7-Xk-y3l" secondAttribute="trailing" id="qVa-B2-21r"/>
                             <constraint firstItem="TyH-1X-LmG" firstAttribute="top" secondItem="bx7-Xk-y3l" secondAttribute="bottom" id="w5I-Hu-S6P"/>
@@ -66,10 +66,12 @@
                     </view>
                     <navigationItem key="navigationItem" title="EmojiWall" id="DNT-gG-BKf">
                         <barButtonItem key="leftBarButtonItem" image="back_circle" id="8h6-dH-mwc"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="WfX-Gy-Gup"/>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="backBarbutton" destination="8h6-dH-mwc" id="PJ9-Bu-OLf"/>
+                        <outlet property="searchBarButton" destination="WfX-Gy-Gup" id="2Jb-5j-0CU"/>
                         <outlet property="wallView" destination="qbe-3t-vxr" id="ggq-HO-7nh"/>
                     </connections>
                 </viewController>

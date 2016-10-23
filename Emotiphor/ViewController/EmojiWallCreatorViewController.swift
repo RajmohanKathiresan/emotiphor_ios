@@ -14,6 +14,7 @@ class EmojiWallCreatorViewController: UIViewController {
     static let kStoryboardName = "EmojiWallCreator"
     static let kControllerIdentifier = "EmojiWallCreatorViewController"
     
+    @IBOutlet weak var searchBarButton: UIBarButtonItem!
     @IBOutlet weak var backBarbutton: UIBarButtonItem!
     @IBOutlet weak var wallView: UIView!
     
@@ -23,12 +24,18 @@ class EmojiWallCreatorViewController: UIViewController {
         super.viewDidLoad()
         self.backBarbutton.target = self
         self.backBarbutton.action = #selector(self.backAction(_:))
-        
+        self.searchBarButton.target = self
+        self.searchBarButton.action = #selector(self.searchAction(_:))
+        self.wallView.layer.borderColor = UIColor.lightGray.cgColor
+        self.wallView.layer.borderWidth = 0.5
+        self.wallView.layer.masksToBounds = true
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        self.drawPatterns(withEmoji: self.emoji)
+        if self.emoji != nil {
+            self.drawPatterns(withEmoji: self.emoji)
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -40,10 +47,20 @@ class EmojiWallCreatorViewController: UIViewController {
         _ = self.navigationController?.popViewController(animated: true)
     }
     
+    func searchAction(_ sender:AnyObject?) {
+        let searchVC = UIViewController.GetViewController(instoryboard: SearchEmojiViewController.kStoryboardName, withController: SearchEmojiViewController.kControllerIdentifier) as! SearchEmojiViewController
+        searchVC.delegate = self
+        self.present(searchVC, animated: true, completion: nil)
+    }
+    
     func drawPatterns(withEmoji emoji:RMEmoji!) {
-        self.wallView.layer.borderColor = UIColor.lightGray.cgColor
-        self.wallView.layer.borderWidth = 0.5
-        self.wallView.layer.masksToBounds = true
+        
+        if let sublayers = wallView.layer.sublayers {
+            for layer in sublayers {
+                layer.removeFromSuperlayer()
+            }
+        }
+        
         let totalWidth:CGFloat = self.wallView.bounds.size.width
         let totalHeight:CGFloat = self.wallView.frame.size.height
         let itemHeight:CGFloat = 32
@@ -59,7 +76,7 @@ class EmojiWallCreatorViewController: UIViewController {
             while (y<totalHeight) {
                 let layer = CALayer()
                 layer.contentsGravity = kCAGravityResize
-                layer.contents = UIImage(named: "1f4d4")?.cgImage
+                layer.contents = UIImage(named: emoji.unicode)?.cgImage
                 layer.frame = CGRect(x: x, y: y, width: itemWidth, height: itemHeight)
                 layer.opacity = 1
                 layer.masksToBounds = true
@@ -71,7 +88,16 @@ class EmojiWallCreatorViewController: UIViewController {
             }
             x+=itemGrossWidth
         }
-        
+    }
+}
 
+extension EmojiWallCreatorViewController : SearchEmojiDelegate {
+    
+    func searchEmojiDidCancel(sender: AnyObject?) {
+        //TODO:
+    }
+    
+    func searchEmojiDidSelectEmoji(emoji: RMEmoji, sender: AnyObject?) {
+        self.drawPatterns(withEmoji: emoji)
     }
 }
