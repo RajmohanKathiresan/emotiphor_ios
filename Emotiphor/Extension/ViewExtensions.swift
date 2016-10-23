@@ -31,6 +31,7 @@ class RoundedRectView : UIView {
     Extension to make rounded view
     Usage: User profile picture view
  */
+@IBDesignable
 class RoundedView : UIView {
     
     override func awakeFromNib() {

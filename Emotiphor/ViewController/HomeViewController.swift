@@ -62,6 +62,8 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
             self.navigationController?.pushViewController(emojiWallController, animated: true)
             break
         default:
+            let colorPickerColor = UIViewController.GetViewController(instoryboard: PantoneColorPickerController.kStoryboardName, withController: PantoneColorPickerController.kControllerIdentifier) as! PantoneColorPickerController
+            self.navigationController?.pushViewController(colorPickerColor, animated: true)
             break
         }
         

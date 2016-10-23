@@ -13,4 +13,8 @@ class ApplicationTheme {
     static func color() -> UIColor {
         return UIColor(netHex: 0x45186F)
     }
+    
+    static func lightGrayColor() -> UIColor {
+        return UIColor(netHex: 0xF1F1F1)
+    }
 }

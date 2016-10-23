@@ -28,10 +28,16 @@
 		E23308D31D885D4800476805 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E23308D11D885D4800476805 /* LaunchScreen.storyboard */; };
 		E23308DC1D885FB600476805 /* Creator.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E23308DB1D885FB600476805 /* Creator.storyboard */; };
 		E23308DE1D88608900476805 /* CreatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23308DD1D88608900476805 /* CreatorViewController.swift */; };
+		E2343CD01DBCD1B5000E01C1 /* CreatorMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2343CCF1DBCD1B5000E01C1 /* CreatorMenu.swift */; };
+		E2343CD41DBCD829000E01C1 /* pantone_color.json in Resources */ = {isa = PBXBuildFile; fileRef = E2343CD31DBCD829000E01C1 /* pantone_color.json */; };
+		E2343CD61DBCD83E000E01C1 /* RMPantoneColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2343CD51DBCD83E000E01C1 /* RMPantoneColor.swift */; };
 		E246B0181D965F9700421E04 /* RMLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E246B0171D965F9700421E04 /* RMLogger.swift */; };
 		E246B01F1D966A5400421E04 /* SearchBarExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E246B01E1D966A5400421E04 /* SearchBarExtensions.swift */; };
 		E246B0241D966FB200421E04 /* ApplicationTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E246B0231D966FB200421E04 /* ApplicationTheme.swift */; };
 		E246B0261D96918B00421E04 /* ViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E246B0251D96918B00421E04 /* ViewControllerExtensions.swift */; };
+		E24E25881DBCFBB100B181E9 /* CreatorMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E24E25871DBCFBB100B181E9 /* CreatorMenu.storyboard */; };
+		E24E258A1DBCFDC900B181E9 /* PantoneColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24E25891DBCFDC900B181E9 /* PantoneColorCell.swift */; };
+		E24E258C1DBCFE7200B181E9 /* PantoneColorPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24E258B1DBCFE7200B181E9 /* PantoneColorPickerController.swift */; };
 		E29A9CD71DBB08F90061C7A0 /* Jackdaws Love St.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E29A9CD61DBB08F90061C7A0 /* Jackdaws Love St.ttf */; };
 		E29A9CD91DBB0A430061C7A0 /* HomeMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29A9CD81DBB0A430061C7A0 /* HomeMenuCell.swift */; };
 		E29A9CDB1DBB0AC50061C7A0 /* HomeMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29A9CDA1DBB0AC50061C7A0 /* HomeMenu.swift */; };
@@ -97,10 +103,16 @@
 		E23308D41D885D4800476805 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E23308DB1D885FB600476805 /* Creator.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Creator.storyboard; path = ViewController/Creator.storyboard; sourceTree = "<group>"; };
 		E23308DD1D88608900476805 /* CreatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreatorViewController.swift; path = ViewController/CreatorViewController.swift; sourceTree = "<group>"; };
+		E2343CCF1DBCD1B5000E01C1 /* CreatorMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreatorMenu.swift; path = Model/CreatorMenu.swift; sourceTree = "<group>"; };
+		E2343CD31DBCD829000E01C1 /* pantone_color.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pantone_color.json; sourceTree = "<group>"; };
+		E2343CD51DBCD83E000E01C1 /* RMPantoneColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMPantoneColor.swift; sourceTree = "<group>"; };
 		E246B0171D965F9700421E04 /* RMLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RMLogger.swift; path = Extension/RMLogger.swift; sourceTree = "<group>"; };
 		E246B01E1D966A5400421E04 /* SearchBarExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchBarExtensions.swift; path = Extension/SearchBarExtensions.swift; sourceTree = "<group>"; };
 		E246B0231D966FB200421E04 /* ApplicationTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApplicationTheme.swift; path = Theme/ApplicationTheme.swift; sourceTree = "<group>"; };
 		E246B0251D96918B00421E04 /* ViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewControllerExtensions.swift; path = Extension/ViewControllerExtensions.swift; sourceTree = "<group>"; };
+		E24E25871DBCFBB100B181E9 /* CreatorMenu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = CreatorMenu.storyboard; path = ViewController/Menu/CreatorMenu.storyboard; sourceTree = "<group>"; };
+		E24E25891DBCFDC900B181E9 /* PantoneColorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PantoneColorCell.swift; path = ViewController/Menu/PantoneColorCell.swift; sourceTree = "<group>"; };
+		E24E258B1DBCFE7200B181E9 /* PantoneColorPickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PantoneColorPickerController.swift; path = ViewController/Menu/PantoneColorPickerController.swift; sourceTree = "<group>"; };
 		E29A9CD61DBB08F90061C7A0 /* Jackdaws Love St.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jackdaws Love St.ttf"; sourceTree = "<group>"; };
 		E29A9CD81DBB0A430061C7A0 /* HomeMenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeMenuCell.swift; path = ViewController/HomeMenuCell.swift; sourceTree = "<group>"; };
 		E29A9CDA1DBB0AC50061C7A0 /* HomeMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeMenu.swift; path = Model/HomeMenu.swift; sourceTree = "<group>"; };
@@ -159,6 +171,7 @@
 			children = (
 				E20708C21D97D924005DAC69 /* Datasource.swift */,
 				E20708C31D97D924005DAC69 /* RealmModel.swift */,
+				E2343CD51DBCD83E000E01C1 /* RMPantoneColor.swift */,
 				E20708C41D97D924005DAC69 /* Resources */,
 			);
 			path = Datasource;
@@ -167,6 +180,7 @@
 		E20708C41D97D924005DAC69 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E2343CD31DBCD829000E01C1 /* pantone_color.json */,
 				E20708C51D97D924005DAC69 /* emoji.json */,
 			);
 			path = Resources;
@@ -197,6 +211,7 @@
 			children = (
 				E209565A1D8B0808008871D7 /* Emoticon.swift */,
 				E29A9CDA1DBB0AC50061C7A0 /* HomeMenu.swift */,
+				E2343CCF1DBCD1B5000E01C1 /* CreatorMenu.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -239,6 +254,7 @@
 		E23308DA1D885F9600476805 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				E24E25861DBCFB9100B181E9 /* Menu */,
 				E2B7D35B1DB5028C00EAC022 /* Home */,
 				E246B0161D965E1200421E04 /* History */,
 				E246B0151D965E0300421E04 /* Creator */,
@@ -282,6 +298,16 @@
 				E246B0231D966FB200421E04 /* ApplicationTheme.swift */,
 			);
 			name = Utils;
+			sourceTree = "<group>";
+		};
+		E24E25861DBCFB9100B181E9 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				E24E25871DBCFBB100B181E9 /* CreatorMenu.storyboard */,
+				E24E25891DBCFDC900B181E9 /* PantoneColorCell.swift */,
+				E24E258B1DBCFE7200B181E9 /* PantoneColorPickerController.swift */,
+			);
+			name = Menu;
 			sourceTree = "<group>";
 		};
 		E29A9CD51DBB08EA0061C7A0 /* Fonts */ = {
@@ -426,6 +452,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E20708C81D97D924005DAC69 /* emoji.json in Resources */,
+				E2343CD41DBCD829000E01C1 /* pantone_color.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +462,7 @@
 			files = (
 				E2A17D331D88654800A18987 /* Placeholder.xcassets in Resources */,
 				E23308DC1D885FB600476805 /* Creator.storyboard in Resources */,
+				E24E25881DBCFBB100B181E9 /* CreatorMenu.storyboard in Resources */,
 				E29A9CD71DBB08F90061C7A0 /* Jackdaws Love St.ttf in Resources */,
 				E23308D31D885D4800476805 /* LaunchScreen.storyboard in Resources */,
 				E29A9CE01DBB7D830061C7A0 /* EmojiWallCreator.storyboard in Resources */,
@@ -546,6 +574,7 @@
 			files = (
 				E20708C61D97D924005DAC69 /* Datasource.swift in Sources */,
 				E20708C71D97D924005DAC69 /* RealmModel.swift in Sources */,
+				E2343CD61DBCD83E000E01C1 /* RMPantoneColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -556,10 +585,13 @@
 				E29A9CDB1DBB0AC50061C7A0 /* HomeMenu.swift in Sources */,
 				E246B0181D965F9700421E04 /* RMLogger.swift in Sources */,
 				E20956621D8B0CAC008871D7 /* EmoticonHistoryCell.swift in Sources */,
+				E24E258C1DBCFE7200B181E9 /* PantoneColorPickerController.swift in Sources */,
 				E22EC9811D8F031A00C66D30 /* EmojiCell.swift in Sources */,
+				E24E258A1DBCFDC900B181E9 /* PantoneColorCell.swift in Sources */,
 				E22EC97D1D8E9E3200C66D30 /* FileManagerExtensions.swift in Sources */,
 				E23308C91D885D4800476805 /* AppDelegate.swift in Sources */,
 				E29A9CD91DBB0A430061C7A0 /* HomeMenuCell.swift in Sources */,
+				E2343CD01DBCD1B5000E01C1 /* CreatorMenu.swift in Sources */,
 				E246B01F1D966A5400421E04 /* SearchBarExtensions.swift in Sources */,
 				E209565D1D8B08EA008871D7 /* ColorExtensions.swift in Sources */,
 				E29A9CE21DBB865F0061C7A0 /* EmojiWallCreatorViewController.swift in Sources */,

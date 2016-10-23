@@ -37,7 +37,7 @@ class EmojiWallCreatorViewController: UIViewController {
     }
     
     func backAction(_ sender:AnyObject?) {
-        self.navigationController?.popViewController(animated: true)
+        _ = self.navigationController?.popViewController(animated: true)
     }
     
     func drawPatterns(withEmoji emoji:RMEmoji!) {

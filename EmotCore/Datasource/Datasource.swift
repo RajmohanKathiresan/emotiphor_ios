@@ -26,13 +26,39 @@ public class DataServices {
         Realm.Configuration.defaultConfiguration = config
     }
     
+    public func importPantoneColors() {
+        let realm = try! Realm()
+        let filePath = Bundle(identifier: "com.rajkm.EmotCore")!.path(forResource: "pantone_color", ofType: "json")
+        do {
+            let data = try Data(contentsOf: URL(fileURLWithPath: filePath!), options: .mappedIfSafe)
+            if let colorsArray = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [[String:AnyObject]] {
+                try realm.write({ 
+                    for colorDict in colorsArray {
+                        let color = RMPantoneColor()
+                        color.name = colorDict["pantone"] as? String ?? ""
+                        if let hexColor = colorDict["hex"] as? String {
+                            color.hex = hexColor
+                        }
+                        realm.add(color, update: true)
+                    }
+                })
+            }
+        }  catch let error {
+            print(error.localizedDescription)
+            print("Something went wrong while importing JSON data into Realm")
+        }
+    }
     
+    public func getPantoneColors() -> Results<RMPantoneColor> {
+        let realm = try! Realm()
+        return realm.objects(RMPantoneColor.self).sorted(byProperty: RMPantoneColor.Field.name, ascending: true)
+    }
+
     /// Import emoji meta from Resource/emoji.JSON file
     public func importFromJSON() {
    
         let realm = try! Realm()
         let filePath = Bundle(identifier: "com.rajkm.EmotCore")!.path(forResource: "emoji", ofType: "json")
-        print(filePath)
         do {
             let data = try Data(contentsOf: URL(fileURLWithPath: filePath!), options: .mappedIfSafe)
             if let emojiDict = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String:AnyObject] {
